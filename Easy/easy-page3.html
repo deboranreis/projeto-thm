@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>  
+  <head>
+    <meta charset="UTF-8"/>
+      <title>Investigating Windows</title>
+  </head>
+    
+  <body>       
+    <p style="text-align: right;">
+      <a href="../index.html">Início</a>   
+    </p>  
+
+    <h1 style="text-align: center;"> Investigating Windows </h1>    
+
+    <br>
+
+    <p style="text-align: center;">
+      Qual é a versão e o ano da máquina Windows?<br> 
+        <font color="blue" size="3">
+          Método 1: Painel de Controle > Sistema > Procurar a versão do sistema<br>
+          Método 2: Acesse o CMD e digite o comando:
+          <font color="#00000">
+            <code style="background-color: lightgrey;" >#Systeminfo</code>
+          </font><br>
+        </font>
+        <font color="green" size="3">R: Windows Server 2016</font>
+      <br>
+      <br>
+      Qual usuário fez login por último?<br> 
+        <font color="blue" size="3">
+          Método: Painel de Controle > Administrative Tools > Event Views > Windows Logs > Security > Audit Success (Details)<br>
+        </font>
+        <font color="green" size="3">R: Administrator</font>
+      <br>
+      <br>
+      Quando foi a última vez que John fez logon no sistema?<br> 
+        <font color="blue" size="3">
+          Método: <b>Findstr</b> é uma ferramenta do windows que você pode executar a partir da linha de comando para localizar texto em arquivos ou em saídas de linha de comando. Dessa forma utilize o seguinte comando para saber a última vez que John fez logon no sistema:<br> 
+          <font color="#00000">
+            <code style="background-color: lightgrey;" >#net user john | findstr /B /c:"Last logon"</code>
+          </font><br>
+        </font>
+        <font color="green" size="3">R: 03/02/2019 5:48:32 PM</font>
+      <br>
+      <br>
+      A qual IP o sistema se conecta quando é iniciado?<br> 
+        <font color="blue" size="3">
+          Método: Acesse o regedit e procure por: <code style="background-color: lightgrey;" >HKEY_LOCAL_MACHINE > SOFTWARE > Microsoft > Windows > CurrentVersion > Run</code> ao acessar o run veja que em UpdateSvc mostra que o pc ao iniciar se conecta com um endereço ip ao executar um programa suspeito.   <br>
+        </font>
+        <font color="green" size="3">R: 10.34.2.3</font>
+      <br>
+      <br>
+      Quais duas contas tinham privilégios administrativos (além do usuário Administrador)?<br> 
+        <font color="blue" size="3">
+          Método: Servidor > Tools > Computer Management > System Tools > Local Users and Groups > Groups > Administrators <br>
+        </font>
+        <font color="green" size="3">R: Jenny, Guest</font>
+      <br>
+      <br>
+      Qual é o nome da tarefa agendada que é maliciosa?<br> 
+        <font color="blue" size="3">
+          Método: Task Scheduler > Task Scheduler Library > Clean File System > Actions (tarefa está startando programa malicioso)<br>
+        </font>
+        <font color="green" size="3">R: Clean file system</font>
+      <br>
+      <br>
+      Qual arquivo a tarefa estava tentando executar diariamente?<br> 
+        <font color="blue" size="3">
+          Método: Task Scheduler > Task Scheduler Library > Clean File System > Actions (tarefa está startando programa malicioso)<br>
+        </font>
+        <font color="green" size="3">R: nc.ps1</font>
+      <br>
+      <br>
+      Em qual porta esse arquivo escutou localmente?<br> 
+        <font color="blue" size="3">
+          Método: Task Scheduler > Task Scheduler Library > Clean File System > Actions (tarefa está startando programa malicioso)<br>
+        </font>
+        <font color="green" size="3">R: 1348</font>
+      <br>
+      <br>
+      Quando foi o último logon de Jenny?<br> 
+        <font color="blue" size="3">
+          Método: Utilize o comando já visto em questão anterior para saber o último logon de Jenny<br>
+        </font>
+          <font color="#00000">
+            <code style="background-color: lightgrey;" >#net user jenny | findstr /B /c:"Last logon"</code>
+          </font><br>
+        <font color="green" size="3">R: Never</font>
+      <br>
+      <br>
+      Em que data ocorreu o compromisso?<br> 
+        <font color="blue" size="3">
+          Método: Em Task Scheduler verificado quando a task foi criada<br>
+        </font>
+        <font color="green" size="3">R: 03/02/2019</font>
+      <br>
+      <br>
+      Durante o comprometimento, em que momento o Windows atribuiu pela primeira vez privilégios especiais a um novo logon?<br> 
+        <font color="blue" size="3">
+          Método: Event Viewer > Windows logs > Security > Event id = 4672 
+          Do lado direito > Event Properties > Abrir e verificar Account Name<br>
+        </font>
+        <font color="green" size="3">R: 03/02/2019 4:04:49 PM</font>
+      <br>
+      <br>
+      Qual ferramenta foi usada para obter senhas do Windows?<br> 
+        <font color="blue" size="3">
+          Explicação: Mimikatz é uma ferramenta desenvolvida em “C” para explorar a segurança do windows e consegue extrair em texto plano as senhas do usuário incluindo AD em um sistema de rede.<br>
+          Método 1: Observe que existe um terminal abrindo o tempo todo com o mimikatz  <br>
+          Método 2: Vá até Task Scheduler novamente e veja que existe uma task chamada GameOver. Em ações podemos ver que essa task está executando o arquivo C:\TMP\mim.exe <br>
+          Método 3: Você também pode procurar por um processo suspeito utilizando o comando abaixo:<br>
+          <font color="#00000">
+            <code style="background-color: lightgrey;" >#tasklist</code>
+          </font><br>
+        </font>
+        <font color="green" size="3">R: Mimikatz</font>
+      <br>
+      <br>
+      Qual era o IP dos servidores de comando e controle externo dos invasores?<br> 
+        <font color="blue" size="3">
+          Método: Ping o google para encontrar o ip dos invasores<br>
+        </font>
+        <font color="green" size="3">R: 76.32.97.132</font>
+      <br>
+      <br>
+      Qual foi o nome da extensão do shell carregado através do site dos servidores?<br> 
+        <font color="blue" size="3">
+          Método: Procure nos arquivos o diretório do site e veja a extensão do arquivo<br>
+        </font>
+        <font color="green" size="3">R: .jsp</font>
+      <br>
+      <br>
+      Qual foi a última porta que o invasor abriu?<br> 
+        <font color="blue" size="3">
+          Método: Servidor  >Tools > Windows Firewall > Inboud Rules > Allow outside Local Port 1337<br>
+        </font>
+        <font color="green" size="3">R: 1337</font>
+      <br>
+      <br>
+      Verifique se há envenenamento de DNS. Qual site foi direcionado?<br> 
+        <font color="blue" size="3">
+          Método: Verifique o arquivo hosts para verificar a lista de endereços listados<br>
+          Caminho do arquivo: \Windows\System32\drivers\etc <br>
+          Veja que existe o vinculo entre o ip 76.32.97.132 e o domínio [google.com](http://google.com), realize o ping em google.com e se ip de retorno bater, o dns não foi envenenado. <br>
+        </font>
+        <font color="green" size="3">R: google.com</font>
+      <br>
+      <br>
+    </p>    
+    <br>
+    <br>
+
+    <p style="text-align: center;">
+      <a href="https://tryhackme.com/room/investigatingwindows">Link para a sala no Try Hack Me</a> 
+    </p>
+    
+    <br>
+    <br> 
+    
+    <p style="text-align: center;">
+      <a href="./easy-page2.html">Anterior</a> - <a href="./easy-page4.html">Próxima</a>
+      <br>
+      <br>
+      <a href = "./home-easy.html">Home Easy</a> 
+    </p> 
+
+  </body>
+</html>
