@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>  
+  <head>
+    <meta charset="UTF-8"/>
+      <title>OWASP Juice Shop</title>
+  </head>
+    
+  <body>       
+    <p style="text-align: right;">
+      <a href="../index.html">Início</a>   
+    </p>  
+
+    <h1 style="text-align: center;"> OWASP Juice Shop </h1>    
+
+    <br>
+
+    <h3 style="text-align: center;">Vamos em uma aventura!</h3>
+    <p style="text-align: center;">
+      Qual é o endereço de e-mail do administrador?<br> 
+        <font color="blue" size="3">
+            Método 1: As avaliações mostram o endereço de e-mail de cada usuário. Que, ao clicar no produto Apple Juice, nos mostra o email do Admin!<br>
+          </font>
+        <font color="green" size="3">R: admin@juice-sh.op</font>
+        <br>
+        <br>
+      Qual parâmetro é usado para pesquisa? <br> 
+        <font color="green" size="3">R: q</font>
+      <br>
+      <br>
+      A qual programa Jim faz referência em sua crítica? <br> 
+        <font color="green" size="3">R: Star Trek</font>
+      <br>
+      <br>
+
+    <h3 style="text-align: center;">Injete o suco</h3>
+    <p style="text-align: center;">
+      Faça login na conta de administrador!<br> 
+        <font color="blue" size="3">
+          Método 1: Tente realizar o login com email e senha aleatórios enquanto o burp captura a solicitação. <br>
+          Após capturar a solicitação altere o email e envie novamente ao servidor com o comando abaixo> <br>
+          <font color="#00000">
+            <code style="background-color: lightgrey;" >{"email":"' or 1=1 --","password":"' or 1=1 --"}</code>
+              </font><br>
+          Isso ocorre porque a solicitação enviada é verdeira (1=1), assim, ele informará ao servidor que o e-mail <br>
+          é válido e nos conectará ao  ID do usuário 0 , que é a conta do administrador.<br>
+        </font>
+        <font color="green" size="3">R: 32a5e0f21372bcc1000a6088b93b458e41f0e02a</font>
+      <br>
+      <br>
+      Faça login na conta do Bender!<br> 
+        <font color="green" size="3">R: fb364762a3c102b2db932069c0e6b78e738d4066</font>
+      <br>
+      <br>
+
+    <h3 style="text-align: center;">Quem quebrou minha fechadura?!</h3>
+    <p style="text-align: center;">
+      Força bruta na senha da conta do administrador!<br> 
+        <font color="green" size="3">R: c2110d06dc6f81c67cd8099ff0ba601241f1ac0e</font>
+      <br>
+      <br>
+      Redefina a senha de Jim!<br> 
+        <font color="green" size="3">R: 094fbc9b48e525150ba97d05b942bbf114987257</font>
+      <br>
+      <br>
+ 
+    <h3 style="text-align: center;">AH! Não olhe!</h3>
+    <p style="text-align: center;">
+      Acesse o Documento Confidencial!<br> 
+        <font color="green" size="3">R: edf9281222395a1c5fee9b89e32175f1ccf50c5b</font>
+      <br>
+      <br>
+      Faça login na conta do MC SafeSearch!<br> 
+        <font color="green" size="3">R: 66bdcffad9e698fd534003fbb3cc7e2b7b55d7f0</font>
+      <br>
+      <br>
+      Baixe o arquivo de backup!<br> 
+        <font color="green" size="3">R: bfc1e6b4a16579e85e06fee4c36ff8c02fb13795</font>
+      <br>
+      <br>
+
+    <h3 style="text-align: center;">Quem está pilotando essa coisa?</h3>
+    <p style="text-align: center;">
+      Acesse a página de administração!<br> 
+        <font color="green" size="3">R: 946a799363226a24822008503f5d1324536629a0</font>
+      <br>
+      <br>
+      Veja o carrinho de compras de outro usuário!<br> 
+      <font color="green" size="3">R: 41b997a36cc33fbe4f0ba018474e19ae5ce52121</font>
+      <br>
+      <br>
+      Remova todas as avaliações 5 estrelas!<br> 
+      <font color="green" size="3">R: 50c97bcce0b895e446d61c83a21df371ac2266ef</font>
+      <br>
+      <br>
+
+    <h3 style="text-align: center;">De onde veio isso?</h3>
+    <p style="text-align: center;">
+      Execute um DOM XSS !<br> 
+        <font color="green" size="3">R: 9aaf4bbea5c30d00a1f5bbcfce4db6d4b0efe0bf</font>
+      <br>
+      <br>
+      Execute um XSS persistente !<br> 
+        <font color="green" size="3">R: 149aa8ce13d7a4a8a931472308e269c94dc5f156</font>
+      <br>
+      <br>
+        <font color="green" size="3">R: 23cefee1527bde039295b2616eeb29e1edc660a0</font>
+      <br>
+      <br>
+
+    <h3 style="text-align: center;">Exploração!</h3>
+    <p style="text-align: center;">   
+      Acesse a  página /#/score-board/<br> 
+        <font color="green" size="3">R: 7efd3174f9dd5baa03a7882027f2824d2f72d86e</font>
+      <br>
+      <br>
+      
+    </p>    
+    <br>
+    <br>
+
+    <p style="text-align: center;">
+      <a href="https://tryhackme.com/room/owaspjuiceshop">Link para a sala no Try Hack Me</a> 
+    </p>
+    
+    <br>
+    <br> 
+    
+    <p style="text-align: center;">
+      <a href="./easy-page7.html">Anterior</a> - <a href="./easy-page9.html">Próxima</a>
+      <br>
+      <br>
+      <a href = "./home-easy.html">Home Easy</a> 
+    </p> 
