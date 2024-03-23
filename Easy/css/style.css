@@ -1,0 +1,16 @@
+body{
+    background-color: lightyellow;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#menu-h {
+    list-style: none;
+    padding: 0;
+}
+
+#code{
+    background-color: red;
+    font-family: courier, monospace;
+}

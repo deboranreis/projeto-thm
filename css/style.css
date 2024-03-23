@@ -1,14 +1,150 @@
-body{
-    background-color: lightyellow;
-    margin: 0 auto;
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+  
+*{
+    margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-#menu-h {
-    list-style: none;
-    padding: 0;
+body{
+    background-color: #06182f;
+    box-sizing: border-box;
+    height: 100vh;
 }
+
+.cabecalho{
+    display: flex;  
+    justify-content: center;
+    background-color: #ff8c2a;
+}
+
+.cabecalho__titulo{
+    display: flex;
+    align-items: center;
+    font-size: medium;
+    padding: 10px;
+    font-family: "Montserrat", sans-serif;
+    color: #ffffff
+    
+}
+
+.apresentacao{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.apresentacao__conteudo{
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.apresentacao__conteudo_imagem_perfil{
+    display: flex;
+    border-radius: 600%;
+    height: 200px;
+    width: 200px;        
+}
+
+
+.apresentacao__conteudo_titulo{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: "Krona One", sans-serif;
+    font-size: 20px;
+    color: #ffffff
+}
+
+.apresentacao__conteudo_texto{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    color: #f6f6f6;
+}
+
+.apresentacao__conteudo_sobremim{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: #f6f6f6;
+    gap: 10px
+}
+
+.apresentacao__conteudo_sobremim_block{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    color: #f6f6f6;
+}
+
+.apresentacao__menu{
+    display: flex;
+    margin: 10px 0px;
+    border-radius: 25px;
+    border: 2px solid #ff8c2a;
+    padding: 20px;
+    width: 400px;
+    height: 500px;
+    text-align: left;
+    flex-direction: column;
+    background-color: #0228574d;
+}
+
+.apresentacao__menu_titulo{
+    display: flex;
+    font-family: "Montserrat", sans-serif;
+    color: #ff8c2a;
+}
+    
+.apresentacao__menu_lista{
+    display: flex;
+    margin: 30px 5px;
+    gap: 10px;
+}
+
+.apresentacao__menu_lista_salas{
+    display: flex;
+    font-family: "Montserrat", sans-serif;
+    color: #ffffff;
+    text-decoration: none;
+
+}
+
+.apresentacao__links{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.apresentacao__links__link{
+    display: flex;
+    width: 30px;
+    text-align: center;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.apresentacao__links__link_thm{
+    display: flex;
+    border-radius: 300%;
+    width: 30px;
+    text-align: center;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+}
+
 
 #code{
     background-color: red;

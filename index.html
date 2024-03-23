@@ -1,44 +1,70 @@
 <!DOCTYPE html>
 <html>  
   <head>
-    <meta charset="UTF-8"/>
-      <title>Resolução de Máquinas THM</title>
-      <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu portfólio - Débora Reis</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
     
   <body>  
 
-    <h3>
-        Oi Humano 👋
-      </h3>
-      
-      <p>
-        Meu nome é Débora, sou Alagoana, amo música boa, linux, audiovisual e inclusão. Posso ter alguns repositórios aqui no github, usufrua o quanto quiser!
-      </p>
-      
-      <p>
-        Estou sempre estudando e me atualizando sobre as novidades da área de atuação e também adoro pesquisar sobre assuntos diversos. Gosto de conversar e realizar trocas de conhecimento. Acredito que o conhecimento deve ser compartilhado e estou sempre buscando compartilhar meus aprendizados por onde passo.
-      </p>
-      
-      <p>
-        Mais sobre mim: <br>
-          <blockquote>🔭 Atualmente sou Analista de Segurança na Hand Talk. </blockquote>
-          <blockquote>🌱 Atualmente estou aprendendo sobre programação web. </blockquote>
-          <blockquote>📫 Como chegar até mim:Selo do Linkedin Selo do Github. </blockquote>
-          <blockquote>😄 Pronomes; Ela / Dela </blockquote>
-        Analista de Segurança da Informação | Cyber Security | LGPD
-        <br>
-        <br>
-      </p>  
+    <header class="cabecalho">
+      <h1 class="cabecalho__titulo">Meu portfólio - Débora Reis</h1>
+    </header>
+   
+    <main class="apresentacao">
+    
+      <section class="apresentacao__conteudo">
+        <img src="assets/profile.png" class="apresentacao__conteudo_imagem_perfil" alt="Débora Reis, mulher branca com os braços cruzados à frente do peito. Cabelos cacheados presos em um coque, utiliza óculos de grau com armação na cor preta e veste uma bluso de manga curta na cor preta. Ao fundo tem uma parede acinzentada.">
+        <h1 class="apresentacao__conteudo_titulo">Oi Humano 👋</h1>
+        <p class="apresentacao__conteudo_texto">
+          Bem-vindo(a) ao meu portfólio! Meu nome é Débora, sou Analista de Segurança e criei este projeto com intuito de armazenar as resoluções de máquinas que vou resolvendo no Try Hack Me. Ele irá servir para meu portfólio e para futuras consultas. Amo o que faço e acredito que o conhecimento deve ser compartilhado.          
+        </p>
+        <section class="apresentacao__conteudo_sobremim">
+          <p>
+            Mais sobre mim: 
+            <blockquote class="apresentacao__conteudo_sobremim_block"> 🏠 Sou de Maceió, Alagoas - Brasil. </blockquote>
+            <blockquote class="apresentacao__conteudo_sobremim_block"> 🤟🏼 Estou aprendendo Libras. </blockquote>
+            <blockquote class="apresentacao__conteudo_sobremim_block">😄 Pronomes; Ela / Dela </blockquote>
+          </p>
+        </section>
 
-      <p>
-        Criei este projeto com intuito de armazenar as resoluções de máquinas que vou resolvendo no Try Hack Me. Ele irá servir para meu portfólio e para futuras consultas.
-      </p>
+        <div class=apresentacao__links>
+          <a href="https://www.linkedin.com/in/debora-reis/">
+            <img class="apresentacao__links__link" src="assets/icon-linkedin.svg" >
+          </a>
+          <a href="https://github.com/deboranreis">
+            <img class="apresentacao__links__link" src="assets/icon-github.png" >
+          </a>
+          <a href="https://tryhackme.com/p/Prodigy">
+            <img class="apresentacao__links__link_thm" src="assets/icon-thm.png">
+          </a>
+        </div>
+        
+      </section>
 
-      <ul id="menu-h">
-        <font>Escolha o nível das máquinas que deseja:</font> 
-        <li><a href="Easy/home-easy.html">Máquinas Easy</a> | <a href="Medium/home-medium.html">Máquinas Medium</a> | <a href="Hard/home-hard.html">Máquinas Hard</a> | <a href="Insane/home-insane.html">Máquinas Insane</a>
-    </ul>
+      <section class="apresentacao__menu">
+        <h3 class="apresentacao__menu_titulo"> Salas realizadas: </h3>
+        <nav class="apresentacao__menu_lista">
+          <ul id="menu">
+              <a class="apresentacao__menu_lista_salas" href="Easy/home-easy.html">Máquinas Easy</a> <br><br>
+              <a class="apresentacao__menu_lista_salas" href="Medium/home-medium.html">Máquinas Medium</a> <br><br>
+              <a class="apresentacao__menu_lista_salas" href="Hard/home-hard.html">Máquinas Hard</a> <br><br>
+              <a class="apresentacao__menu_lista_salas" href="Insane/home-insane.html">Máquinas Insane</a> <br><br>
+          </ul>
+        </nav>
+      </section>    
 
+      
+
+    </main>
+    
+    <footer class="rodape">
+      <br>
+    </footer>
+
+      
   </body>
 </html>
