@@ -1,16 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-  
+
 :root {
     --background: #06182f;
     --azul-neon: #22D4FD;
     --branco: #f6f6f6;
     --side-bar: #113463;
     --side-bar-submenu: #184683;
+    --laranja: #ffba05;
+    --cinza: #434242b0;
+    --verdinho: #2dd888;
+    --back-resposta: #f6f6f607;
 
     --fonte-titulo: "Krona One", sans-serif;
     --fonte-texto: "Montserrat", sans-serif;
 }
-
+  
 *{
     margin: 0;
     padding: 0;
@@ -26,31 +30,33 @@ body{
 
 .cabecalho{
     display: flex;
-    justify-content: center;
-    background-color: var(--azul-neon);
+    justify-content: flex-end;
+    padding: 0px 20px;
 }
 
-.apresentacao__conteudo{
+.cabecalho__botao_inicio{
     display: flex;
-    margin: 40px 40px;
-    padding: 50px 50px;
-    height: 650px;
+    width: 24px;
+    height: 24px;
+    margin: 25px;
+    border-radius: 16px;
+}
+
+.sfacil_conteudo{
+    display: flex;
+    margin: 15px 40px;
+    padding: 15px 50px; 
     flex-direction: column;
     align-items: center;
-    gap: 40px;
+    gap: 30px;
     background-size:contain;
+    border: 2px solid var(--azul-neon);
+    border-radius: 14px;
 }
 
-.apresentacao__conteudo_imagem_perfil{
+.sfacil__conteudo_titulo{
     display: flex;
-    border-radius: 600%;
-    height: 200px;
-    width: 200px;        
-}
-
-
-.apresentacao__conteudo_titulo{
-    display: flex;
+    margin: 15px 10px;
     flex-direction: column;
     text-align: center;
     font-family: var(--fonte-titulo);
@@ -58,35 +64,17 @@ body{
     color: var(--branco);
 }
 
-.apresentacao__conteudo_texto{
+.sfacil__conteudo_texto{
     display: flex;
+    padding: 20px 80px 5px 80px;
     flex-direction: column;
     text-align: center;
     font-size: 14px;
     font-family: var(--fonte-texto);
-    font-weight: 300;
+    font-weight: 300px;
     color: var(--branco);
-}
-
-.apresentacao__conteudo_sobremim{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    font-size: 14px;
-    font-family: var(--fonte-texto);
-    font-weight: 500;
-    color: var(--branco);
-    gap: 10px
-}
-
-.apresentacao__conteudo_sobremim_block{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    font-size: 14px;
-    font-family: var(--fonte-texto);
-    font-weight: 300;
-    color: var(--branco);
+    gap: 10px;
+    align-items: center;
 }
 
 .side-bar{
@@ -172,25 +160,64 @@ body{
     margin: 25px;
     cursor: pointer;
 }
-  
 
-.apresentacao__links{
+.sfacil__link{
     display: flex;
-    justify-content: space-between;
     gap: 15px;
+    flex-direction: row;
+    justify-content: center;
+    padding: 15px;
 }
 
-.apresentacao__links__link{
+.sfacil__link_sala{
     display: flex;
-    width: 30px;
-    text-align: center;
+    width: 150px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    border: 2px solid var(--azul-neon);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--branco);
+    font-family: var(--fonte-texto);
 }
 
-.apresentacao__links__link_thm{
-    display: flex;
-    border-radius: 300%;
-    width: 30px;
-    text-align: center;
+.sfacil__link a:hover{
+    background: var(--azul-neon);
+    transition: 0.3s ease;
+    color: var(--background);
+}
+
+.sfacil__pergunta{
+    width: 20px;
+    height: 20px;
+    margin: -5px 10px;
+}
+
+.sfacil__explicacao{
+    color: var(--verdinho);
+}
+
+.sfacil__resposta{
+    color: var(--laranja);
+    font-weight: 800px;
+    font-size: 14px;
+    font-family: var(--fonte-texto);
+    background-color: var(--back-resposta);
+    height: auto;
+    width: 300px;
+    border-radius: 10px;
+}
+
+
+.sfacil__resposta_codigo{
+	text-align: left;
+	width: 500px;
+	padding: 20px;
+	background-color: var(--cinza);
+    border-left: 4px solid var(--azul-neon);
 }
 
 

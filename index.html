@@ -5,16 +5,111 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu portfólio - Débora Reis</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="UTF-8" ></script>
     <link rel="stylesheet" href="css/style.css">
   </head>
     
   <body>  
 
     <header class="cabecalho">
-      <h1 class="cabecalho__titulo">Meu portfólio - Débora Reis</h1>
+      <nav>
+
+        <div class="side-bar__menu-btn">
+          <i class="fas fa-bars"></i>
+        </div>
+
+        <div class="side-bar active">
+          <div class="side-bar__close-btn">
+            <i class="fas fa-times"></i>
+          </div>
+
+          <div class="side-bar__menu">
+
+            <div class="side-bar__menu_item">
+              <a class="side-bar__sub-btn"><img src="assets/icon-easy.png" class="side-bar__menu_item_seta"> Room Easy<i class="fas fa-angle-right dropdown"></i></a>
+
+              <div class="side-bar__sub-menu">
+                <a href="Easy/easy-page1.html"><img src="assets/icon-seta.png"> Junior Security Analyst Intro</a>
+                <a href="Easy/easy-page2.html"><img src="assets/icon-seta.png"> Introductory Networking</a>
+                <a href="Easy/easy-page3.html"><img src="assets/icon-seta.png"> Investigating Windows</a>
+                <a href="Easy/easy-page4.html"><img src="assets/icon-seta.png"> Picles Rick</a>
+                <a href="Easy/easy-page5.html"><img src="assets/icon-seta.png"> Nesso (Nessus)</a>
+                <a href="Easy/easy-page6.html"><img src="assets/icon-seta.png"> Burp Suite: The Basics</a>
+                <a href="Easy/easy-page7.html"><img src="assets/icon-seta.png"> Burp Suite: Repeater</a>
+                <a href="Easy/easy-page8.html"><img src="assets/icon-seta.png"> OWASP Juice Shop</a>
+                <a href="Easy/easy-page9.html"><img src="assets/icon-seta.png"> Pyramid Of Pain</a>
+                <a href="Easy/easy-page10.html"><img src="assets/icon-seta.png"> SQL Injection</a>                
+              </div>
+
+            </div>
+
+
+            <div class="side-bar__menu_item">
+              <a class="side-bar__sub-btn"><img src="assets/icon-medium.png" class="side-bar__menu_item_seta"> Room Medium<i class="fas fa-angle-right dropdown"></i></a>
+
+              <div class="side-bar__sub-menu">
+                <a href="Medium/medium-page1.html"><img src="assets/icon-seta.png"> Pentesting Fundamentals</a>
+                <a href="Medium/medium-page2.html"><img src="assets/icon-seta.png"> Principles of Security</a>
+
+              </div>
+
+            </div>
+
+
+
+            <div class="side-bar__menu_item">
+              <a class="side-bar__sub-btn"><img src="assets/icon-hard.png" class="side-bar__menu_item_seta"> Room Hard<i class="fas fa-angle-right dropdown"></i></a>
+
+              <div class="side-bar__sub-menu">
+                <a href="#"><img src="assets/icon-seta.png"> hard-page1</a>
+
+              </div>
+
+            </div>
+
+            <div class="side-bar__menu_item">
+              <a class="side-bar__sub-btn"><img src="assets/icon-insano.png" class="side-bar__menu_item_seta"> Room Insane<i class="fas fa-angle-right dropdown"></i></a>
+            
+              <div class="side-bar__sub-menu">
+                <a href="#"><img src="assets/icon-seta.png"> insane-page1</a>
+
+              </div>
+            
+            </div>
+
+          </div>
+
+        </div>
+
+      </nav>
     </header>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+        $('.side-bar__sub-btn').click(function(){
+          $(this).next('.side-bar__sub-menu').slideToggle();
+          $(this).find('.dropdown').toggleClass('rotate');
+        });
+
+        $('.side-bar__menu-btn').click(function(){
+          $('.side-bar').addClass('active');
+          $('.side-bar__menu-btn').css("visibility","hidden");
+        });
+
+        $('.side-bar__close-btn').click(function(){
+          $('.side-bar').removeClass('active');
+          $('.side-bar__menu-btn').css("visibility","visible");
+        });
+
+      });
+    </script>
+
+
    
-    <main class="apresentacao">
+    <main>
     
       <section class="apresentacao__conteudo">
         <img src="assets/profile.png" class="apresentacao__conteudo_imagem_perfil" alt="Débora Reis, mulher branca com os braços cruzados à frente do peito. Cabelos cacheados presos em um coque, utiliza óculos de grau com armação na cor preta e veste uma bluso de manga curta na cor preta. Ao fundo tem uma parede acinzentada.">
@@ -33,37 +128,22 @@
 
         <div class=apresentacao__links>
           <a href="https://www.linkedin.com/in/debora-reis/">
-            <img class="apresentacao__links__link" src="assets/icon-linkedin.svg" >
+            <img class="apresentacao__links__link" src="assets/icon-linkedin.svg" alt="Logo da plataforma Linkedin">
           </a>
           <a href="https://github.com/deboranreis">
-            <img class="apresentacao__links__link" src="assets/icon-github.png" >
+            <img class="apresentacao__links__link" src="assets/icon-github.png" alt="Logo da plataforma Github">
           </a>
           <a href="https://tryhackme.com/p/Prodigy">
-            <img class="apresentacao__links__link_thm" src="assets/icon-thm.png">
+            <img class="apresentacao__links__link_thm" src="assets/icon-thm.png" alt="Logo da Plataforma Try Hack Me">
           </a>
         </div>
         
       </section>
 
-      <section class="apresentacao__menu">
-        <h3 class="apresentacao__menu_titulo"> Salas realizadas: </h3>
-        <nav class="apresentacao__menu_lista">
-          <ul id="menu">
-              <a class="apresentacao__menu_lista_salas" href="Easy/home-easy.html">Máquinas Easy</a> <br><br>
-              <a class="apresentacao__menu_lista_salas" href="Medium/home-medium.html">Máquinas Medium</a> <br><br>
-              <a class="apresentacao__menu_lista_salas" href="Hard/home-hard.html">Máquinas Hard</a> <br><br>
-              <a class="apresentacao__menu_lista_salas" href="Insane/home-insane.html">Máquinas Insane</a> <br><br>
-          </ul>
-        </nav>
-      </section>    
-
       
 
     </main>
     
-    <footer class="rodape">
-      <br>
-    </footer>
 
       
   </body>
