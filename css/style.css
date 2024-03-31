@@ -54,7 +54,7 @@ body{
     flex-direction: column;
     text-align: center;
     font-family: var(--fonte-titulo);
-    font-size: 20px;
+    font-size: 1.25rem;
     color: var(--branco);
 }
 
@@ -62,7 +62,7 @@ body{
     display: flex;
     flex-direction: column;
     text-align: center;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-family: var(--fonte-texto);
     font-weight: 300;
     color: var(--branco);
@@ -72,7 +72,7 @@ body{
     display: flex;
     flex-direction: column;
     text-align: center;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-family: var(--fonte-texto);
     font-weight: 500;
     color: var(--branco);
@@ -83,7 +83,7 @@ body{
     display: flex;
     flex-direction: column;
     text-align: center;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-family: var(--fonte-texto);
     font-weight: 300;
     color: var(--branco);
@@ -118,7 +118,7 @@ body{
 
 .side-bar__menu_item a{
     color: var(--branco);
-    font-size: 16px;
+    font-size: 1rem;
     text-decoration: none;
     padding: 5px 30px;
     line-height: 60px;
@@ -158,7 +158,7 @@ body{
 .side-bar__menu-btn{    
     position: absolute;
     color: var(--branco);
-    font-size: 20px;
+    font-size: 1.25rem;
     left: 0;
     margin: 25px;
     cursor: pointer;
@@ -167,7 +167,7 @@ body{
 .side-bar__close-btn{  
     position: absolute;
     color: var(--branco);
-    font-size: 20px;
+    font-size: 1.25rem;
     right: 0;
     margin: 25px;
     cursor: pointer;

@@ -1,211 +1,204 @@
 <!DOCTYPE html>
 <html>  
   <head>
-    <meta charset="UTF-8"/>
-      <title>Introductory Networking</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introductory Networking</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="UTF-8" ></script>
+    <link rel="stylesheet" href="css/style-easy.css">
   </head>
     
-  <body>       
-    <p style="text-align: right;">
-      <a href="../index.html">Início</a>   
-    </p>  
+  <body>  
 
-    <h1 style="text-align: center;"> Introductory Networking </h1>    
+    <header class="cabecalho">
 
-    <br>
+        <h1 class="sfacil__titulo_pagina">Room Easy</h1>
+        
+        <a class="cabecalho__botao_inicio" href="../index.html"><img src="/assets/icon-home.png"></a>
+        
+        <nav>
 
-    <p style="text-align: center;">
-        Qual camada escolheria enviar dados por TCP ou UDP?<br> 
-            <font color="green" size="3">R: 4</font>
-        <br>
-        <br>
-        Qual camada verifica as informações recebidas para ter certeza de que não foram corrompidas?<br> 
-            <font color="green" size="3">R: 2</font>
-        <br>
-        <br>
-        Em qual camada os dados seriam formatados em preparação para transmissão?<br> 
-            <font color="green" size="3">R: 2</font>
-        <br>
-        <br>
-        Qual camada transmite e recebe dados?<br> 
-            <font color="green" size="3">R: 1</font>
-        <br>
-        <br>
-        Qual camada criptografa, compacta ou transforma os dados iniciais para fornecer um formato padronizado?<br> 
-            <font color="green" size="3">R: 6</font>    
-        <br>
-        <br>
-        Qual camada rastreia as comunicações entre os computadores host e receptor?<br> 
-            <font color="green" size="3">R: 5</font>
-        <br>
-        <br>
-        Qual camada aceita solicitações de comunicação de aplicativos?<br>
-            <font color="green" size="3">R: 7</font>
-        <br>
-        <br>
-        Qual camada lida com o endereçamento lógico?<br>
-            <font color="green" size="3">R: 3</font>
-        <br>
-        <br>
-        Ao enviar dados por TCP , como você chamaria os pedaços de dados "pequenos"?<br>
-            <font color="green" size="3">R: Segments</font>
-        <br>
-        <br>
-        [Pesquisa] Com qual camada o protocolo FTP se comunicaria?<br>
-            <font color="green" size="3">R: 7</font>
-        <br>
-        <br>
-        Qual protocolo da camada de transporte seria mais adequado para transmitir um vídeo ao vivo?<br>
-            <font color="green" size="3">R: UDP</font>
-        <br>
-        <br>
-        Como você se referiria aos dados da camada 2 do processo de encapsulamento (com o modelo OSI)?<br>
-            <font color="green" size="3">R: Frames</font>
-        <br>
-        <br>
-        Como você se referiria aos dados da camada 4 do processo de encapsulamento (com o modelo OSI), se o protocolo UDP fosse selecionado?<br>
-            <font color="green" size="3">R: Datagrams</font>
-        <br>
-        <br>
-        Que processo um computador executaria em uma mensagem recebida?<br>
-            <font color="green" size="3">R: De-encapsulation</font>
-        <br>
-        <br>
-        Qual é a única camada do modelo OSI que adiciona um <b>trailer</b> durante o encapsulamento?<br>
-            <font color="green" size="3">R: Data Link</font>
-        <br>
-        <br>
-        O encapsulamento fornece uma camada extra de segurança (Sim/Não)?<br>
-            <font color="green" size="3">R: Yes</font>
-        <br>
-        <br>
-        Qual modelo foi introduzido primeiro, OSI ou TCP/IP?<br>
-            <font color="green" size="3">R: TCP/IP</font>
-        <br>
-        <br>
-        Qual camada do modelo TCP/IP cobre a funcionalidade da camada de Transporte do modelo OSI (Nome Completo)?<br>
-            <font color="green" size="3">R: Transport</font>
-        <br>
-        <br>
-        Qual camada do modelo TCP/IP cobre a funcionalidade da camada de Sessão do modelo OSI (Nome Completo)?<br>
-            <font color="green" size="3">R: Application</font>
-        <br>
-        <br>
-        A camada de interface de rede do modelo TCP/IP cobre a funcionalidade de duas camadas no modelo OSI. Essas camadas são Data Link e?.. (Nome Completo)?<br>
-            <font color="green" size="3">R: Physical</font>
-        <br>
-        <br>
-        Qual camada do modelo TCP/IP lida com a funcionalidade da camada de rede OSI?<br>
-            <font color="green" size="3">R: Internet</font>
-        <br>
-        <br>
-        Que tipo de protocolo é TCP?<br>
-            <font color="green" size="3">R: Connection-based</font>
-        <br>
-        <br>
-        Qual é a abreviação de SYN?<br>
-            <font color="green" size="3">R: Synchronise</font>
-        <br>
-        <br>
-        Qual é a segunda etapa do handshake de três vias?<br>
-            <font color="green" size="3">R: SYN/ACK</font>
-        <br>
-        <br>
-        Qual é o nome abreviado do segmento "Reconhecimento" no handshake triplo?<br>
-            <font color="green" size="3">R: ACK</font>
-        <br>
-        <br>
-        Qual comando você usaria para executar ping no site bbc.co.uk?<br>
-            <font color="green" size="3">R: ping bbc.co.uk</font>
-        <br>
-        <br>
-        Ping <b>muirlandoracle.co.uk.</b> Qual é o endereço IPv4?<br>
-            <font color="green" size="3">R: 217.160.0.152</font>
-        <br>
-        <br>
-        Qual opção permite alterar o intervalo de solicitações de ping enviadas?<br>
-            <font color="green" size="3">R: -i</font>
-        <br>
-        <br>
-        Qual opção permitiria restringir solicitações ao IPv4?<br>
-            <font color="green" size="3">R: -4</font>
-        <br>
-        <br>
-        Qual opção forneceria uma saída mais detalhada?<br>
-            <font color="green" size="3">R: -v</font>
-        <br>
-        <br>
-        Qual opção você usaria para especificar uma interface ao usar o Traceroute?<br>
-            <font color="green" size="3">R: -i</font>
-        <br>
-        <br>
-        Qual opção você usaria se quisesse usar solicitações TCP SYN ao rastrear a rota?<br>
-            <font color="green" size="3">R: -T</font>
-        <br>
-        <br>
-        [Pensamento lateral]  Em qual camada do modelo <b>TCP/IP</b> o traceroute será executado por padrão (Windows)?<br>
-            <font color="green" size="3">R: Internet</font>
-        <br>
-        <br>
-        Qual é o código postal do registrante do facebook.com?<br>
-            <font color="green" size="3">R: 94025</font>
-        <br>
-        <br>
-        Quando o domínio facebook.com foi registrado pela primeira vez (Formato: DD/MM/AAAA)?<br>
-            <font color="green" size="3">R: 29/03/1997</font>
-        <br>
-        <br>
-        Em qual cidade o registrante está baseado?<br>
-            <font color="green" size="3">R: Redmond</font>
-        <br>
-        <br>
-        [OSINT] Qual é o nome do campo de golfe próximo ao endereço do registrante do microsoft.com?<br>
-            <font color="green" size="3">R: Bellevue Golf Course</font>
-        <br>
-        <br>
-        Qual é o e-mail técnico registrado em microsoft.com?<br>
-            <font color="green" size="3">R: msnhst@microsoft.com, mailto:msnhst@microsoft.com </font>
-        <br>
-        <br>
-        Qual é a abreviação de DNS?<br>
-            <font color="green" size="3">R: Domain Name System</font>
-        <br>
-        <br>
-        Qual é o primeiro tipo de servidor DNS que seu computador consultaria ao pesquisar um domínio?<br>
-            <font color="green" size="3">R: Recursive</font>
-        <br>
-        <br>
-        Que tipo de servidor DNS contém registros específicos para extensões de domínio (ou seja *, .com,* .co.uk*, etc)*? Use a versão longa do nome.<br>
-            <font color="green" size="3">R: Top-Level Domain</font>
-        <br>
-        <br>
-        Qual é o primeiro lugar que seu computador procuraria para encontrar o endereço IP de um domínio?<br>
-            <font color="green" size="3">R: Hosts File</font>
-        <br>
-        <br>
-        [Pesquisa] O Google administra dois servidores DNS públicos. Um deles pode ser consultado com o IP 8.8.8.8, qual o endereço IP do outro?<br>
-            <font color="green" size="3">R: 8.8.4.4</font>
-        <br>
-        <br>
-        Se uma consulta DNS tiver um TTL de 24 horas, qual número a consulta dig mostraria?<br>
-            <font color="green" size="3">R: 86400</font>
-    </p>    
-    <br>
-    <br>
+            <div class="side-bar__menu-btn">
+            <i class="fas fa-bars"></i>
+            </div>
 
-    <p style="text-align: center;">
-      <a href="https://tryhackme.com/room/introtonetworking">Link para a sala no Try Hack Me</a> 
-    </p>
+            <div class="side-bar active">
+            <div class="side-bar__close-btn">
+                <i class="fas fa-times"></i>
+            </div>
+
+            <div class="side-bar__menu">
+
+                <div class="side-bar__menu_item">
+                <a class="side-bar__sub-btn"><img src="../assets/icon-easy.png" class="side-bar__menu_item_seta"> Room Easy<i class="fas fa-angle-right dropdown"></i></a>
+
+                <div class="side-bar__sub-menu">
+                    <a href="easy-page1.html"><img src="../assets/icon-seta.png"> Junior Security Analyst Intro</a>
+                    <a href="#"><img src="../assets/icon-seta.png"> Introductory Networking</a>
+                    <a href="easy-page3.html"><img src="../assets/icon-seta.png"> Investigating Windows</a>
+                    <a href="easy-page4.html"><img src="../assets/icon-seta.png"> Picles Rick</a>
+                    <a href="easy-page5.html"><img src="../assets/icon-seta.png"> Nesso (Nessus)</a>
+                    <a href="easy-page6.html"><img src="../assets/icon-seta.png"> Burp Suite: The Basics</a>
+                    <a href="easy-page7.html"><img src="../assets/icon-seta.png"> Burp Suite: Repeater</a>
+                    <a href="easy-page8.html"><img src="../assets/icon-seta.png"> OWASP Juice Shop</a>
+                    <a href="easy-page9.html"><img src="../assets/icon-seta.png"> Pyramid Of Pain</a>
+                    <a href="easy-page10.html"><img src="../assets/icon-seta.png"> SQL Injection</a>
+                </div>
+
+                </div>
+
+
+                <div class="side-bar__menu_item">
+                <a class="side-bar__sub-btn"><img src="../assets/icon-medium.png" class="side-bar__menu_item_seta"> Room Medium<i class="fas fa-angle-right dropdown"></i></a>
+
+                <div class="side-bar__sub-menu">
+                    <a href="Medium/medium-page1.html"><img src="../assets/icon-seta.png"> Pentesting Fundamentals</a>
+                    <a href="Medium/medium-page2.html"><img src="../assets/icon-seta.png"> Principles of Security</a>
+
+                </div>
+
+                </div>
+
+
+                <div class="side-bar__menu_item">
+                <a class="side-bar__sub-btn"><img src="../assets/icon-hard.png" class="side-bar__menu_item_seta"> Room Hard<i class="fas fa-angle-right dropdown"></i></a>
+
+                <div class="side-bar__sub-menu">
+                    <a href="#"><img src="../assets/icon-seta.png"> hard-page1</a>
+
+                </div>
+
+                </div>
+
+                <div class="side-bar__menu_item">
+                <a class="side-bar__sub-btn"><img src="../assets/icon-insano.png" class="side-bar__menu_item_seta"> Room Insane<i class="fas fa-angle-right dropdown"></i></a>
+                
+                <div class="side-bar__sub-menu">
+                    <a href="#"><img src="../assets/icon-seta.png"> insane-page1</a>
+
+                </div>
+                
+                </div>
+
+            </div>
+
+            </div>
+
+        </nav>
+    </header>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+        $('.side-bar__sub-btn').click(function(){
+          $(this).next('.side-bar__sub-menu').slideToggle();
+          $(this).find('.dropdown').toggleClass('rotate');
+        });
+
+        $('.side-bar__menu-btn').click(function(){
+          $('.side-bar').addClass('active');
+          $('.side-bar__menu-btn').css("visibility","hidden");
+        });
+
+        $('.side-bar__close-btn').click(function(){
+          $('.side-bar').removeClass('active');
+          $('.side-bar__menu-btn').css("visibility","visible");
+        });
+
+      });
+    </script>
+
+    <main>
     
-    <br>
-    <br> 
-    
-    <p style="text-align: center;">
-      <a href="./easy-page1.html">Anterior</a> - <a href="./easy-page3.html">Próxima</a>
-      <br>
-      <br>
-      <a href = "./home-easy.html">Home Easy</a> 
-    </p> 
+      <section class="sfacil_conteudo">
+        
+        <p class="sfacil__conteudo_titulo">Introductory Networking</p>
+        
+        <div class="sfacil__conteudo_secao">
+            Tarefa 2 | O modelo OSI: Uma visão geral
+        </div>
 
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Qual camada escolheria enviar dados por TCP ou UDP?
+          </p>  
+          <p class="sfacil__explicacao">
+            A Camada 4 - Transporte: A camada de transporte é uma camada muito interessante que desempenha inúmeras funções importantes. Seu primeiro objetivo é escolher o protocolo pelo qual os dados serão transmitidos.
+          </p>
+          <p class="sfacil__resposta">R: 4</p>
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Qual era o endereço IP malicioso nos alertas?
+          </p>  
+          <p class="sfacil__explicacao">
+            Ao abrir o site, temos a tela de "Alert Log", onde podemos visualizar os eventos registrados. Nessa página podemos ver que houve uma tentativa de conexão não autorizada detectada do endereço IP 221.181.185.159 para a porta 22.
+          </p>
+          <p class="sfacil__resposta">R: 221.181.185.159</p>
+        </div>
+
+        <div class="sfacil__conteudo_secao">
+            Tarefa 3 | Encapsulamento
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Para quem você encaminhou o evento associado ao endereço IP malicioso?
+          </p>  
+          <p class="sfacil__explicacao">
+            Ao adicionar o ip maliciosa na no site, o mesmo irá abrir uma tela informando as pessoas e seus respectivos cargos a quem você podemos encaminhar o evento. Podemos ver que o Will Griffin é o Líder do Time de SOC.
+          </p>
+          <p class="sfacil__resposta">R: Will Griffin</p>
+        </div>
+
+        <div class="sfacil__conteudo_secao">
+            Tarefa 4 | O modelo TCP/IP
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Depois de bloquear o endereço IP malicioso no firewall, que mensagem o agente malicioso deixou para você?
+          </p>  
+          <p class="sfacil__explicacao">
+            Ao bloquear o ip malicioso no firewall receberemos a mensagem que o agente malicioso nos deixou.
+          </p>
+          <p class="sfacil__resposta">R: THM{UNTIL-WE-MEET-AGAIN}</p>
+        </div>
+
+        <div class="sfacil__conteudo_secao">
+            Tarefa 5 | Pingar
+        </div>
+
+        <div class="sfacil__conteudo_secao">
+            Tarefa 6 | Trace Rota
+        </div>
+
+        <div class="sfacil__conteudo_secao">
+            Tarefa 7 | QUEM É
+        </div>
+
+        <div class="sfacil__conteudo_secao">
+            Tarefa 8 | Escavação
+        </div>
+        
+      </section>    
+      
+      <section>
+        <div class="sfacil__link">
+            <a href="easy-page1.html" class="sfacil__link_sala">Anterior</a>
+            <a href="https://tryhackme.com/room/introtonetworking" class="sfacil__link_sala">Sala Try Hack Me</a>
+            <a href="easy-page2.html" class="sfacil__link_sala">Próxima</a>
+        </div>
+      </section>
+      
+
+    </main> 
+      
   </body>
 </html>
+
+
