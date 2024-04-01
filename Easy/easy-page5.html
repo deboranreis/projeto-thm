@@ -1,148 +1,147 @@
 <!DOCTYPE html>
 <html>  
   <head>
-    <meta charset="UTF-8"/>
-      <title>Nesso(Nessus)</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="UTF-8" ></script>
+    <link rel="stylesheet" href="css/style-easy.css">
   </head>
     
-  <body>       
-    <p style="text-align: right;">
-      <a href="../index.html">Início</a>   
-    </p>  
+  <body>  
 
-    <h1 style="text-align: center;"> Nesso (Nessus) </h1>    
+    <header class="cabecalho">
+      <h1 class="sfacil__titulo_pagina">Room Easy</h1>
 
-    <br>
+      <a class="cabecalho__botao_inicio" href="../index.html"><img src="/assets/icon-home.png"></a>
+
+      <nav>
+
+        <div class="side-bar__menu-btn">
+          <i class="fas fa-bars"></i>
+        </div>
+
+        <div class="side-bar active">
+          <div class="side-bar__close-btn">
+            <i class="fas fa-times"></i>
+          </div>
+
+          <div class="side-bar__menu">
+
+            <div class="side-bar__menu_item">
+              <a class="side-bar__sub-btn"><img src="../assets/icon-easy.png" class="side-bar__menu_item_seta"> Room Easy<i class="fas fa-angle-right dropdown"></i></a>
+
+              <div class="side-bar__sub-menu">
+                <a href="#"><img src="../assets/icon-seta.png"> Junior Security Analyst Intro</a>
+                <a href="easy-page2.html"><img src="../assets/icon-seta.png"> Introductory Networking</a>
+                <a href="easy-page3.html"><img src="../assets/icon-seta.png"> Investigating Windows</a>
+                <a href="easy-page4.html"><img src="../assets/icon-seta.png"> Picles Rick</a>
+                <a href="easy-page5.html"><img src="../assets/icon-seta.png"> Nesso (Nessus)</a>
+                <a href="easy-page6.html"><img src="../assets/icon-seta.png"> Burp Suite: The Basics</a>
+                <a href="easy-page7.html"><img src="../assets/icon-seta.png"> Burp Suite: Repeater</a>
+                <a href="easy-page8.html"><img src="../assets/icon-seta.png"> OWASP Juice Shop</a>
+                <a href="easy-page9.html"><img src="../assets/icon-seta.png"> Pyramid Of Pain</a>
+                <a href="easy-page10.html"><img src="../assets/icon-seta.png"> SQL Injection</a>
+              </div>
+
+            </div>
+
+
+            <div class="side-bar__menu_item">
+              <a class="side-bar__sub-btn"><img src="../assets/icon-medium.png" class="side-bar__menu_item_seta"> Room Medium<i class="fas fa-angle-right dropdown"></i></a>
+
+              <div class="side-bar__sub-menu">
+                <a href="Medium/medium-page1.html"><img src="../assets/icon-seta.png"> Pentesting Fundamentals</a>
+                <a href="Medium/medium-page2.html"><img src="../assets/icon-seta.png"> Principles of Security</a>
+
+              </div>
+
+            </div>
+
+
+            <div class="side-bar__menu_item">
+              <a class="side-bar__sub-btn"><img src="../assets/icon-hard.png" class="side-bar__menu_item_seta"> Room Hard<i class="fas fa-angle-right dropdown"></i></a>
+
+              <div class="side-bar__sub-menu">
+                <a href="#"><img src="../assets/icon-seta.png"> hard-page1</a>
+
+              </div>
+
+            </div>
+
+            <div class="side-bar__menu_item">
+              <a class="side-bar__sub-btn"><img src="../assets/icon-insano.png" class="side-bar__menu_item_seta"> Room Insane<i class="fas fa-angle-right dropdown"></i></a>
+            
+              <div class="side-bar__sub-menu">
+                <a href="#"><img src="../assets/icon-seta.png"> insane-page1</a>
+
+              </div>
+            
+            </div>
+
+          </div>
+
+        </div>
+
+      </nav>
+    </header>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+        $('.side-bar__sub-btn').click(function(){
+          $(this).next('.side-bar__sub-menu').slideToggle();
+          $(this).find('.dropdown').toggleClass('rotate');
+        });
+
+        $('.side-bar__menu-btn').click(function(){
+          $('.side-bar').addClass('active');
+          $('.side-bar__menu-btn').css("visibility","hidden");
+        });
+
+        $('.side-bar__close-btn').click(function(){
+          $('.side-bar').removeClass('active');
+          $('.side-bar__menu-btn').css("visibility","visible");
+        });
+
+      });
+    </script>
+
+    <main>
     
-    <p style="text-align: center;">
-      INSTRUÇÕES SOBRE O NESSUS <br><br>
-      Acesse  <a href="https://www.tenable.com/products/nessus/nessus-essentials">https://www.tenable.com/products/nessus/nessus-essentials</a> e registre uma conta. <br><br>
-      <b>Você precisa fazer isso para obter um código de ativação.</b><br>
-      Em seguida, baixaremos o Nessus-#.##.#-debian6_ amd64. arquivo deb<br>
-      Salve-o na sua pasta /Downloads/<br>
-      No terminal navegaremos até essa pasta e executaremos o seguinte comando:<br>
-      <font color="#00000">
-        <code style="background-color: lightgrey;" >sudo dpkg -i  arquivo_pacote.deb</code>
-      </font><br>
-      Lembre-se de substituir  arquivo_pacote.deb pelo nome do arquivo que você baixou.<br>
-      Iniciaremos agora o serviço Nessus com o comando:<br>
-      <font color="#00000">
-        <code style="background-color: lightgrey;" >sudo /bin/systemctl start nessusd.service</code>
-      </font><br>
-      Abra o navegador e acesse o seguinte URL:<br>
-      <a href="https://localhost:8834/">https://localhost:8834/</a><br>
-      Você pode receber um alerta de risco de segurança.<br>
-      Clique em <b>Avançado... -> Aceite o risco e continue</b><br>
-    </p>
-    
-    <br>
+      <section class="sfacil_conteudo">
+        
+        <p class="sfacil__conteudo_titulo">Título</p>
 
-    <p style="text-align: center;">
-      ====================================================================
-    </p>
-    
-    <br>
+        <div class="sfacil__conteudo_secao">
+          Tarefa 1 | Seção
+        </div>
 
-      <h3 style="text-align: center;">Tipos de navegação e digitalização!</h3>
-    <p style="text-align: center;">
-      Qual é o nome do <b>botão</b> usado para iniciar uma varredura?<br>
-        <font color="green" size="3">R: New Scan</font>
-      <br>
-      <br>
-      Qual opção do menu lateral nos permite criar <b>modelos personalizados</b>?<br> 
-        <font color="green" size="3">R: Policies</font>
-      <br>
-      <br>
-      Qual menu nos permite alterar as propriedades <b>do plugin</b>, como ocultá-las ou alterar sua gravidade?<br> 
-        <font color="green" size="3">R: Plugin Rules</font>
-      <br>
-      <br>      
-      Na seção <b>'Modelos de verificação'</b> depois de clicar em <b>'Nova verificação'</b>, qual verificação nos permite ver simplesmente quais hosts estão ativos?<br> 
-        <font color="green" size="3">R: Host Discovery</font>
-      <br>
-      <br>
-      Um dos tipos de varredura mais úteis, considerado <b>'adequado para qualquer host'</b>?<br> 
-        <font color="green" size="3">R: Basic Network Scan</font>
-      <br>
-      <br>
-      Qual verificação permite <b>'autenticar em hosts e enumerar atualizações ausentes'</b>?<br> 
-        <font color="green" size="3">R: Credentialed Patch Audit</font>
-      <br>
-      <br>
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Pergunta
+          </p>  
+          <p class="sfacil__explicacao">
+            Explicação
+          </p>
+          <p class="sfacil__resposta">R: Resposta</p>
+        </div>
+
+        
+      </section>    
       
-      Qual verificação é usada especificamente para verificar <b>aplicativos da Web</b>?<br> 
-        <font color="green" size="3">R: Web Application Tests</font>
-      <br>
-      <br>
-    </p>    
-    <br>
-    <br>
+      <section>
+        <div class="sfacil__link">
+            <a href="https://tryhackme.com/room/jrsecanalystintrouxo" class="sfacil__link_sala">Sala Try Hack Me</a>
+            <a href="easy-page2.html" class="sfacil__link_sala">Próxima</a>
+        </div>
+      </section>
+      
 
-    <h3 style="text-align: center;">Digitalizando!</h3>
-    <p style="text-align: center;">
-      Crie uma nova <b>'Verificação de rede básica'</b> direcionada à VM implantada. Que opção podemos definir em <b>'BASIC'</b> (à esquerda) para definir um horário para a execução desta verificação? Isto pode ser muito útil quando o congestionamento da rede é um problema.<br>
-        <font color="green" size="3">R: Schedule</font>
-      <br>
-      <br>
-      Em <b>'DISCOVERY'</b> (à esquerda) defina o <b>'Tipo de digitalização'</b> para cobrir as portas 1-65535. Como é chamado esse tipo?<br> 
-        <font color="green" size="3">R: Port scan (all ports)</font>
-      <br>
-      <br>
-      Para que <b>'Tipo de digitalização'</b> podemos alterar em <b>'AVANÇADO'</b> para uma conexão com largura de banda menor?<br> 
-        <font color="green" size="3">R: Scan low bandwidth links</font>
-      <br>
-      <br>
-      Após a conclusão da verificação, de qual <b>'vulnerabilidade'</b> na família <b>'scanners de porta'</b> podemos visualizar os detalhes para ver as portas abertas neste host?<br> 
-        <font color="green" size="3">R: Nessus SYN scanner</font>
-      <br>
-      <br>
-      Qual <b>versão do servidor Apache</b> HTTP é relatada pelo Nessus?<br> 
-        <font color="green" size="3">R: 2.4.99</font>
-      <br>
-      <br>
-    </p>    
-    <br>
-    <br>
-
-    <h3 style="text-align: center;">Verificando um aplicativo da Web!</h3>
-    <p style="text-align: center;">
-      Qual é o ID do plugin que determina o tipo e a versão do servidor HTTP?<br>
-        <font color="green" size="3">R: 10107</font>
-      <br>
-      <br>
-      Qual página de autenticação é descoberta pelo scanner que transmite credenciais em texto não criptografado?<br>
-        <font color="green" size="3">R: login.php</font>
-      <br>
-      <br>   
-      Qual é a extensão do arquivo do backup de configuração?<br> 
-        <font color="green" size="3">R: .bak</font>
-      <br>
-      <br>
-      Qual diretório contém documentos de exemplo? (Isso estará em um diretório php)<br> 
-        <font color="green" size="3">R: /external/phpids/0.6/docs/examples/</font>
-      <br>
-      <br>     
-      A qual vulnerabilidade este aplicativo é suscetível associado ao X-Frame-Options?<br> 
-        <font color="green" size="3">R: clickjacking</font>
-      <br>
-      <br>
-    </p>    
-    <br>
-    <br>
-
-    <p style="text-align: center;">
-      <a href="https://tryhackme.com/room/rpnessusredux">Link para a sala no Try Hack Me</a> 
-    </p>
-    
-    <br>
-    <br> 
-    
-    <p style="text-align: center;">
-      <a href="./easy-page4.html">Anterior</a> - <a href="./easy-page6.html">Próxima</a>
-      <br>
-      <br>
-      <a href = "./home-easy.html">Home Easy</a> 
-    </p> 
-
+    </main> 
+      
   </body>
 </html>

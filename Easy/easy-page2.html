@@ -126,19 +126,109 @@
             <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Qual camada escolheria enviar dados por TCP ou UDP?
           </p>  
           <p class="sfacil__explicacao">
-            A Camada 4 - Transporte: A camada de transporte é uma camada muito interessante que desempenha inúmeras funções importantes. Seu primeiro objetivo é escolher o protocolo pelo qual os dados serão transmitidos.
+            Camada 4 - Transporte: A camada de transporte é uma camada muito interessante que desempenha inúmeras funções importantes. Seu primeiro objetivo é escolher o protocolo pelo qual os dados serão transmitidos.
           </p>
           <p class="sfacil__resposta">R: 4</p>
         </div>
 
         <div class="sfacil__conteudo_texto">
           <p>
-            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Qual era o endereço IP malicioso nos alertas?
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Qual camada verifica as informações recebidas para ter certeza de que não foram corrompidas?
           </p>  
           <p class="sfacil__explicacao">
-            Ao abrir o site, temos a tela de "Alert Log", onde podemos visualizar os eventos registrados. Nessa página podemos ver que houve uma tentativa de conexão não autorizada detectada do endereço IP 221.181.185.159 para a porta 22.
+            Camada 2 - Enlace de Dados: A camada de enlace de dados também desempenha uma função importante ao receber dados, pois verifica as informações recebidas para ter certeza de que não foram corrompidas durante a transmissão, o que pode acontecer quando os dados são transmitidos pela camada 1: a camada física.
           </p>
-          <p class="sfacil__resposta">R: 221.181.185.159</p>
+          <p class="sfacil__resposta">R: 2</p>
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Em qual camada os dados seriam formatados em preparação para transmissão?
+          </p>  
+          <p class="sfacil__explicacao">
+            Camada 2 - Enlace de Dados: A camada de enlace de dados concentra-se no endereçamento físico da transmissão.
+          </p>
+          <p class="sfacil__resposta">R: 2</p>
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Qual camada transmite e recebe dados?
+          </p>  
+          <p class="sfacil__explicacao">
+            Camada 1 - Física: A camada física vai até o hardware do computador. É aqui que os pulsos elétricos que compõem a transferência de dados em uma rede são enviados e recebidos. É função da camada física converter os dados binários da transmissão em sinais e transmiti-los pela rede, bem como receber os sinais recebidos e convertê-los novamente em dados binários.
+          </p>
+          <p class="sfacil__resposta">R: 1</p>
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Qual camada criptografa, compacta ou transforma os dados iniciais para fornecer um formato padronizado?
+          </p>  
+          <p class="sfacil__explicacao">
+            Camada 6 - Apresentação: A camada de apresentação traduz os dados em um formato padronizado, bem como lida com qualquer criptografia, compactação ou outras transformações nos dados. Feito isso, os dados são transmitidos para a camada de sessão.
+          </p>
+          <p class="sfacil__resposta">R: 6</p>
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Qual camada rastreia as comunicações entre os computadores host e receptor?
+          </p>  
+          <p class="sfacil__explicacao">
+            Camada 5 - Sessão: Quando a camada de sessão recebe os dados formatados corretamente da camada de apresentação, ela verifica se consegue estabelecer uma conexão com o outro computador na rede. Se não puder, ele retornará um erro e o processo não prosseguirá.
+          </p>
+          <p class="sfacil__resposta">R: 5</p>
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Qual camada aceita solicitações de comunicação de aplicativos?
+          </p>  
+          <p class="sfacil__explicacao">
+            Camada 7 - Aplicação:  Funciona quase exclusivamente com aplicativos, fornecendo uma interface para eles utilizarem na transmissão de dados. Quando os dados são fornecidos à camada de aplicação, eles são transmitidos à camada de apresentação.
+          </p>
+          <p class="sfacil__resposta">R: 7</p>
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Qual camada lida com o endereçamento lógico?
+          </p>  
+          <p class="sfacil__explicacao">
+            Camada 3 - Rede: A camada de rede é responsável por localizar o destino da sua solicitação. Por exemplo, a Internet é uma rede enorme; quando você deseja solicitar informações de uma página da web, é a camada de rede que pega o endereço IP da página e descobre o melhor caminho a seguir. Nesta fase estamos trabalhando com o que é chamado de endereçamento lógico (ou seja, endereços IP), que ainda são controlados por software.
+          </p>
+          <p class="sfacil__resposta">R: 3</p>
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Ao enviar dados por TCP, como você chamaria os pedaços de dados "pequenos"?
+          </p>  
+          <p class="sfacil__explicacao">
+            Com um protocolo selecionado, a camada de transporte divide a transmissão em pedaços pequenos (no TCP eles são chamados de segmentos , no UDP eles são chamados de datagramas ), o que facilita a transmissão da mensagem com sucesso. 
+          </p>
+          <p class="sfacil__resposta">R: Segments</p>
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta"><b>[Pesquisa]</b> Com qual camada o protocolo FTP se comunica?
+          </p>  
+          <p class="sfacil__explicacao">
+            O FTP (File Transfer Protocol) é um protocolo da camada de aplicação do TCP/IP que utiliza duas conexões TCP paralelas para transferir um arquivo: uma de controle e outra de dados. O FTP faz parte da camada de aplicação e usa o TCP para fazer as transferências de arquivos.
+          </p>
+          <p class="sfacil__resposta">R: 7</p>
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Qual protocolo da camada de transporte seria mais adequado para transmitir um vídeo ao vivo?
+          </p>  
+          <p class="sfacil__explicacao">
+            O UDP é usado em situações em que a velocidade é mais importante (por exemplo, streaming de vídeo).
+          </p>
+          <p class="sfacil__resposta">R: UDP</p>
         </div>
 
         <div class="sfacil__conteudo_secao">
@@ -147,12 +237,49 @@
 
         <div class="sfacil__conteudo_texto">
           <p>
-            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Para quem você encaminhou o evento associado ao endereço IP malicioso?
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Como você se referiria aos dados da camada 2 do processo de encapsulamento (com o modelo OSI)?
           </p>  
           <p class="sfacil__explicacao">
-            Ao adicionar o ip maliciosa na no site, o mesmo irá abrir uma tela informando as pessoas e seus respectivos cargos a quem você podemos encaminhar o evento. Podemos ver que o Will Griffin é o Líder do Time de SOC.
+            A Camada 2 organiza os dados em <b>quadros(frames)</b>, transmitindo-os sequencialmente e processando os quadros de confirmação mandados de volta pelo receptor.
           </p>
-          <p class="sfacil__resposta">R: Will Griffin</p>
+          <p class="sfacil__resposta">R: Frames</p>
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Como você se referiria aos dados da camada 4 do processo de encapsulamento (com o modelo OSI), se o protocolo UDP fosse selecionado?
+          </p>  
+          <p class="sfacil__explicacao">
+            Na camada de transporte, os dados encapsulados são chamados de segmento ou datagrama (dependendo se TCP ou UDP foi selecionado como protocolo de transmissão).
+          </p>
+          <p class="sfacil__resposta">R: Datagrams</p>
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Que processo um computador executaria em uma mensagem recebida?
+          </p>  
+          <p class="sfacil__explicacao">
+            Quando a mensagem é recebida pelo segundo computador, ele inverte o processo começando na camada física e avançando até chegar à camada de aplicação, eliminando as informações adicionadas à medida que avança. Isto é conhecido como  desencapsulação.
+          </p>
+          <p class="sfacil__resposta">R: De-encapsulation</p>
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Qual é a única camada do modelo OSI que adiciona um trailer  durante o encapsulamento?
+          </p>  
+          <p class="sfacil__explicacao">
+            A camada de enlace de dados também adiciona uma peça no  final  da transmissão, que é usada para verificar se os dados não foram corrompidos na transmissão; isso também tem a vantagem adicional de maior segurança, já que os dados não podem ser interceptados e adulterados sem quebrar o trailer. 
+          </p>
+          <p class="sfacil__resposta">R: Data Link</p>
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">O encapsulamento fornece uma camada extra de segurança <b>(Sim/Não)</b> ?
+          </p>  
+          <p class="sfacil__resposta">R: Aye</p>
         </div>
 
         <div class="sfacil__conteudo_secao">
@@ -161,28 +288,306 @@
 
         <div class="sfacil__conteudo_texto">
           <p>
-            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Depois de bloquear o endereço IP malicioso no firewall, que mensagem o agente malicioso deixou para você?
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Qual modelo foi introduzido primeiro, OSI ou TCP/IP?
           </p>  
           <p class="sfacil__explicacao">
-            Ao bloquear o ip malicioso no firewall receberemos a mensagem que o agente malicioso nos deixou.
+            O modelo TCP/IP foi introduzido pelo DoD americano em 1982 para fornecer um padrão – algo que todos os diferentes fabricantes deveriam seguir.
           </p>
-          <p class="sfacil__resposta">R: THM{UNTIL-WE-MEET-AGAIN}</p>
+          <p class="sfacil__resposta">R: TCP/IP</p>
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Qual camada do modelo TCP/IP cobre a funcionalidade da camada de Transporte do modelo OSI <b>(Nome Completo)</b>?
+          </p>  
+          <p class="sfacil__explicacao">
+            O modelo TCP/IP é, em muitos aspectos, muito semelhante ao modelo OSI. É alguns anos mais antigo e serve de base para redes do mundo real.  O modelo TCP /IP consiste em quatro camadas: Aplicação, Transporte, Internet e Interface de Rede. Entre eles, cobrem a mesma gama de funções que as sete camadas do modelo OSI.
+          </p>
+          <p class="sfacil__resposta">R: Transporte</p>
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Qual camada do modelo TCP/IP cobre a funcionalidade da camada de Sessão do modelo OSI <b>(Nome Completo)</b>?
+          </p>  
+          <p class="sfacil__resposta">R: Application</p>
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">A camada de interface de rede do modelo TCP/IP cobre a funcionalidade de duas camadas no modelo OSI. Essas camadas são Data Link e?.. <b>(Nome Completo)</b>?
+          </p>  
+          <p class="sfacil__resposta">R: Physical</p>
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Qual camada do modelo TCP/IP lida com a funcionalidade da camada de rede OSI?
+          </p>  
+          <p class="sfacil__resposta">R: Internet</p>
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Que tipo de protocolo é TCP?
+          </p>  
+          <p class="sfacil__explicacao">
+            O TCP é um protocolo baseado em conexão. Em outras palavras, antes de enviar qualquer dado via TCP, você deve primeiro formar uma conexão estável entre os dois computadores. O processo de formação dessa conexão é chamado de handshake triplo.
+          </p>
+          <p class="sfacil__resposta">R: Connection-based</p>
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Qual é a abreviação de SYN?
+          </p>  
+          <p class="sfacil__explicacao">
+            SYN (abreviação de sincronizar ), que essencialmente faz o primeiro contato para iniciar o processo de conexão.
+          </p>
+          <p class="sfacil__resposta">R: Synchronise</p>
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Qual é a segunda etapa do handshake de três vias?
+          </p>  
+          <p class="sfacil__explicacao">
+            O servidor responderá então com um pacote contendo o bit SYN, bem como outro bit de "reconhecimento", chamado ACK.
+          </p>
+          <p class="sfacil__resposta">R: Syn/ACK</p>
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Qual é o nome abreviado do segmento "Reconhecimento" no handshake triplo?
+          </p>  
+          <p class="sfacil__resposta">R: ACK</p>
         </div>
 
         <div class="sfacil__conteudo_secao">
             Tarefa 5 | Pingar
         </div>
 
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Qual comando você usaria para executar ping no site bbc.co.uk?
+          </p>  
+          <p class="sfacil__explicacao">
+            O comando ping é usado quando queremos testar se uma conexão com um recurso remoto é possível. Normalmente será um site na internet, mas também pode ser um computador na sua rede doméstica se você quiser verificar se está configurado corretamente.
+          </p>
+          <p class="sfacil__resposta">R: ping bbc.co.uk</p>
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Ping muirlandoracle.co.uk. Qual é o endereço IPv4?
+          </p> 
+        </div> 
+        <div>
+          <div class=fakeMenu>
+            <div class="fakeButtons fakeClose"></div>
+            <div class="fakeButtons fakeMinimize"></div>
+            <div class="fakeButtons fakeZoom"></div>
+          </div>
+          <div class="fakeScreen">
+            <p class="sfacil__resposta_codigo">
+              # ping muirlandoracle.co.uk <br>
+              217.160.0.152
+            </p>
+          </div>
+        </div>
+        <div class="sfacil__conteudo_texto">
+          <p class="sfacil__resposta">R: 217.160.0.152</p>
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Qual opção permite alterar o intervalo de solicitações de ping enviadas?
+          </p>  
+          <p class="sfacil__explicacao">
+            -i altera o intervalo para enviar pacotes.
+          </p>
+          <p class="sfacil__resposta">R: -i</p>
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Qual opção permitiria restringir solicitações ao IPv4?
+          </p>  
+          <p class="sfacil__explicacao">
+            -4 e -6	especifica o protocolo de endereço IP de destino como IPv4 ou IPv6, respectivamente.
+          </p>
+          <p class="sfacil__resposta">R: -4</p>
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Qual opção forneceria uma saída mais detalhada?
+          </p>  
+          <p class="sfacil__explicacao">
+            -v habilita a saída detalhada.
+          </p>
+          <p class="sfacil__resposta">R: -v</p>
+        </div>
+
         <div class="sfacil__conteudo_secao">
             Tarefa 6 | Trace Rota
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Qual opção você usaria para especificar uma interface ao usar o Traceroute?
+          </p>  
+          <p class="sfacil__explicacao">
+            -i Especifica a interface através da qual o traceroute deve enviar pacotes. Por padrão, a interface é selecionada de acordo com a tabela de roteamento.
+          </p>
+          <p class="sfacil__resposta">R: -i</p>
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Qual opção você usaria se quisesse usar solicitações TCP SYN ao rastrear a rota?
+          </p>  
+          <p class="sfacil__explicacao">
+            -T Use TCP SYN para sondagens.
+          </p>
+          <p class="sfacil__resposta">R: -T</p>
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta"><b>[Pensamento lateral]</b> Em qual camada do modelo TCP/IP o traceroute será executado por padrão (Windows)?
+          </p>  
+          <p class="sfacil__resposta">R: Internet</p>
         </div>
 
         <div class="sfacil__conteudo_secao">
             Tarefa 7 | QUEM É
         </div>
 
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Faça uma pesquisa whois facebook.com <br>
+            Qual é o código postal do registrante do facebook.com?
+          </p>  
+        </div>
+        <div>
+          <div class=fakeMenu>
+            <div class="fakeButtons fakeClose"></div>
+            <div class="fakeButtons fakeMinimize"></div>
+            <div class="fakeButtons fakeZoom"></div>
+          </div>
+          <div class="fakeScreen">
+            <p class="sfacil__resposta_codigo">
+              # whois facebook.com <br>
+              94025
+            </p>
+          </div>
+        </div>
+        <div class="sfacil__conteudo_texto">
+          <p class="sfacil__resposta">R: 94025</p>
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Quando o domínio facebook.com foi registrado pela primeira vez (Formato: DD/MM/AAAA)?
+          </p>  
+          <p class="sfacil__resposta">R: 29/03/1997</p>
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Faça uma pesquisa whois em microsoft.com <br>
+            Em qual cidade o registrante está baseado?
+          </p>  
+        </div>
+        <div>
+          <div class=fakeMenu>
+            <div class="fakeButtons fakeClose"></div>
+            <div class="fakeButtons fakeMinimize"></div>
+            <div class="fakeButtons fakeZoom"></div>
+          </div>
+          <div class="fakeScreen">
+            <p class="sfacil__resposta_codigo">
+              # whois microsoft.com <br>
+              Redmond
+            </p>
+          </div>
+        </div>
+        <div class="sfacil__conteudo_texto">
+          <p class="sfacil__resposta">R: Redmond</p>
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta"> <b>[OSINT]</b> Qual é o nome do campo de golfe próximo ao endereço do registrante do microsoft.com?
+          </p>  
+          <p class="sfacil__resposta">R: Bellevue Golf Course</p>
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Qual é o e-mail técnico registrado em microsoft.com?
+          </p>  
+          <p class="sfacil__resposta">R: msnhst@microsoft.com</p>
+        </div>
+
         <div class="sfacil__conteudo_secao">
             Tarefa 8 | Escavação
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Qual é a abreviação de DNS?
+          </p>  
+          <p class="sfacil__explicacao">
+            O DNS (Sistema de Nomes de Domínio) é frequentemente comparado a uma lista telefônica. O DNS usa nomes de domínio legíveis por humanos, como www.tryhackme.com, e os mapeia para endereços IP numéricos que podem ser lidos por máquinas.
+          </p>
+          <p class="sfacil__resposta">R: Domain Name System</p>
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Qual é o primeiro tipo de servidor DNS que seu computador consultaria ao pesquisar um domínio?
+          </p>  
+          <p class="sfacil__explicacao">
+            Supondo que o endereço ainda não tenha sido encontrado, seu computador enviará uma solicitação para o que é conhecido como  servidor DNS recursivo . Eles serão automaticamente conhecidos pelo roteador da sua rede.
+          </p>
+          <p class="sfacil__resposta">R: Recursive</p>
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Que tipo de servidor DNS contém registros específicos para extensões de domínio (ou seja , .com, .co.uk*, etc)*? Use a versão longa do nome.
+          </p>  
+          <p class="sfacil__explicacao">
+            Os servidores de domínio de nível superior (TLD) são divididos em extensões. Assim, por exemplo, se você estivesse procurando por tryhackme .com , sua solicitação seria redirecionada para um servidor TLD que gerenciava .comdomínios. Se você estivesse procurando bbc .co.uk, sua solicitação seria redirecionada para um servidor TLD que lida com  .co.uk domínios.
+          </p>
+          <p class="sfacil__resposta">R: Top-Level Domain</p>
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Qual é o primeiro lugar que seu computador procuraria para encontrar o endereço IP de um domínio?
+          </p>  
+          <p class="sfacil__explicacao">
+            Se nenhum mapeamento tiver sido criado manualmente, o computador verifica o cache DNS local para ver se já possui um endereço IP armazenado para o site; se isso acontecer, ótimo. Caso contrário, passa para a próxima etapa do processo.
+          </p>
+          <p class="sfacil__resposta">R: Local Cache</p>
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta"><b>[Pesquisa]</b> O Google administra dois servidores DNS públicos. Um deles pode ser consultado com o IP 8.8.8.8, qual o endereço IP do outro?
+          </p>  
+          <p class="sfacil__resposta">R: 8.8.4.4</p>
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Se uma consulta DNS tiver um TTL de 24 horas, qual número a consulta dig mostraria?
+          </p>  
+          <p class="sfacil__resposta">R: 86400</p>
         </div>
         
       </section>    
@@ -191,7 +596,7 @@
         <div class="sfacil__link">
             <a href="easy-page1.html" class="sfacil__link_sala">Anterior</a>
             <a href="https://tryhackme.com/room/introtonetworking" class="sfacil__link_sala">Sala Try Hack Me</a>
-            <a href="easy-page2.html" class="sfacil__link_sala">Próxima</a>
+            <a href="easy-page3.html" class="sfacil__link_sala">Próxima</a>
         </div>
       </section>
       

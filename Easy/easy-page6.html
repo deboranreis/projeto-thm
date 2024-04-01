@@ -1,116 +1,147 @@
 <!DOCTYPE html>
 <html>  
   <head>
-    <meta charset="UTF-8"/>
-      <title>Burp Suite: The Basics</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="UTF-8" ></script>
+    <link rel="stylesheet" href="css/style-easy.css">
   </head>
     
-  <body>       
-    <p style="text-align: right;">
-      <a href="../index.html">Início</a>   
-    </p>  
+  <body>  
 
-    <h1 style="text-align: center;"> Burp Suite: The Basics </h1>    
+    <header class="cabecalho">
+      <h1 class="sfacil__titulo_pagina">Room Easy</h1>
 
-    <br>
+      <a class="cabecalho__botao_inicio" href="../index.html"><img src="/assets/icon-home.png"></a>
 
-    <h3 style="text-align: center;">O que é o Brup Suite</h3>
-    <p style="text-align: center;">
-      Qual edição do Burp Suite é executada em um servidor e fornece verificação constante de aplicativos da web de destino?<br> 
-        <font color="green" size="3">R: Burp Suit Enterprise</font>
-      <br>
-      <br>
-      O Burp Suite é frequentemente usado ao atacar aplicativos da web e aplicativos _____.<br> 
-        <font color="green" size="3">R: Mobile</font>
-      <br>
-      <br>
-    </p>    
-    <br>
-    <br>
+      <nav>
 
-    <h3 style="text-align: center;">Recursos da comunidade Burp</h3>
-    <p style="text-align: center;">  
-        Qual recurso do Burp Suite nos permite interceptar solicitações entre nós e o alvo?<br> 
-        <font color="green" size="3">R: Proxy</font>
-      <br>
-      <br>
-      Qual ferramenta Burp usaríamos para forçar um formulário de login?<br> 
-        <font color="green" size="3">R: Intruder</font>
-      <br>
-      <br>
-    </p>    
-    <br>
-    <br>
+        <div class="side-bar__menu-btn">
+          <i class="fas fa-bars"></i>
+        </div>
 
-    <h3 style="text-align: center;">Painel</h3>
-    <p style="text-align: center;">  
-    Qual menu fornece informações sobre as ações realizadas pelo Burp Suite, como iniciar o proxy, e detalhes sobre as conexões feitas através do Burp?<br> 
-        <font color="green" size="3">R: Event Log</font>
-      <br>
-      <br>
-    </p>    
-    <br>
-    <br>
+        <div class="side-bar active">
+          <div class="side-bar__close-btn">
+            <i class="fas fa-times"></i>
+          </div>
 
-    <h3 style="text-align: center;">Navegação</h3>
-    <p style="text-align: center;">  
-      Para qual guia Ctrl + Shift + P nos mudará?<br> 
-        <font color="green" size="3">R: Proxy Tab</font>
-      <br>
-      <br>
-    </p>    
-    <br>
-    <br>
+          <div class="side-bar__menu">
 
-    <h3 style="text-align: center;">Opções</h3>
-    <p style="text-align: center;">  
-      Em que categoria você pode encontrar uma referência a um "Cookies jar"?<br> 
-        <font color="green" size="3">R: Sessions</font>
-      <br>
-      <br>
-      Em qual categoria base você encontra a subcategoria "Atualizações", que controla o comportamento de atualização do Burp Suite?<br> 
-      <font color="green" size="3">R: Suite</font>
-    <br>
-    <br>
-      Qual é o nome da subcategoria que permite alterar as combinações de teclas dos atalhos no Burp Suite?<br> 
-        <font color="green" size="3">R: Hotkeys</font>
-      <br>
-      <br>
-      Se tivermos carregado certificados TLS do lado do cliente, podemos substituí-los por projeto (sim/não)?<br> 
-        <font color="green" size="3">R: Yea</font>
-      <br>
-      <br>
-    </p>    
-    <br>
-    <br>
+            <div class="side-bar__menu_item">
+              <a class="side-bar__sub-btn"><img src="../assets/icon-easy.png" class="side-bar__menu_item_seta"> Room Easy<i class="fas fa-angle-right dropdown"></i></a>
 
-    <h3 style="text-align: center;">Mapa do site e definições de problemas</h3>
-    <p style="text-align: center;">  
-      Qual é o sinalizador que você recebe após visitar o endpoint incomum?<br> 
-        <font color="blue" size="3">
-          Método: Instale a extensão do FoxyProxy no Firefox, configure a extensão e Burp de forma que o mesmo possa realizar a interceptação<br>
-          Navegue pelo site para que o Burp possa capturar as páginas, e em sequida na tela de Target > Site Map procure por uma página com nome composto por uma série de letras e número aleatórios.<br>
-        </font>
-        <font color="green" size="3">R: THM{NmNlZTliNGE1MWU1ZTQzMzgzNmFiNWVk}</font>
-      <br>
-      <br>
-    </p>    
-    <br>
-    <br>
+              <div class="side-bar__sub-menu">
+                <a href="#"><img src="../assets/icon-seta.png"> Junior Security Analyst Intro</a>
+                <a href="easy-page2.html"><img src="../assets/icon-seta.png"> Introductory Networking</a>
+                <a href="easy-page3.html"><img src="../assets/icon-seta.png"> Investigating Windows</a>
+                <a href="easy-page4.html"><img src="../assets/icon-seta.png"> Picles Rick</a>
+                <a href="easy-page5.html"><img src="../assets/icon-seta.png"> Nesso (Nessus)</a>
+                <a href="easy-page6.html"><img src="../assets/icon-seta.png"> Burp Suite: The Basics</a>
+                <a href="easy-page7.html"><img src="../assets/icon-seta.png"> Burp Suite: Repeater</a>
+                <a href="easy-page8.html"><img src="../assets/icon-seta.png"> OWASP Juice Shop</a>
+                <a href="easy-page9.html"><img src="../assets/icon-seta.png"> Pyramid Of Pain</a>
+                <a href="easy-page10.html"><img src="../assets/icon-seta.png"> SQL Injection</a>
+              </div>
 
-    <p style="text-align: center;">
-      <a href="https://tryhackme.com/room/burpsuitebasics">Link para a sala no Try Hack Me</a> 
-    </p>
+            </div>
+
+
+            <div class="side-bar__menu_item">
+              <a class="side-bar__sub-btn"><img src="../assets/icon-medium.png" class="side-bar__menu_item_seta"> Room Medium<i class="fas fa-angle-right dropdown"></i></a>
+
+              <div class="side-bar__sub-menu">
+                <a href="Medium/medium-page1.html"><img src="../assets/icon-seta.png"> Pentesting Fundamentals</a>
+                <a href="Medium/medium-page2.html"><img src="../assets/icon-seta.png"> Principles of Security</a>
+
+              </div>
+
+            </div>
+
+
+            <div class="side-bar__menu_item">
+              <a class="side-bar__sub-btn"><img src="../assets/icon-hard.png" class="side-bar__menu_item_seta"> Room Hard<i class="fas fa-angle-right dropdown"></i></a>
+
+              <div class="side-bar__sub-menu">
+                <a href="#"><img src="../assets/icon-seta.png"> hard-page1</a>
+
+              </div>
+
+            </div>
+
+            <div class="side-bar__menu_item">
+              <a class="side-bar__sub-btn"><img src="../assets/icon-insano.png" class="side-bar__menu_item_seta"> Room Insane<i class="fas fa-angle-right dropdown"></i></a>
+            
+              <div class="side-bar__sub-menu">
+                <a href="#"><img src="../assets/icon-seta.png"> insane-page1</a>
+
+              </div>
+            
+            </div>
+
+          </div>
+
+        </div>
+
+      </nav>
+    </header>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+        $('.side-bar__sub-btn').click(function(){
+          $(this).next('.side-bar__sub-menu').slideToggle();
+          $(this).find('.dropdown').toggleClass('rotate');
+        });
+
+        $('.side-bar__menu-btn').click(function(){
+          $('.side-bar').addClass('active');
+          $('.side-bar__menu-btn').css("visibility","hidden");
+        });
+
+        $('.side-bar__close-btn').click(function(){
+          $('.side-bar').removeClass('active');
+          $('.side-bar__menu-btn').css("visibility","visible");
+        });
+
+      });
+    </script>
+
+    <main>
     
-    <br>
-    <br> 
-    
-    <p style="text-align: center;">
-      <a href="./easy-page5.html">Anterior</a> - <a href="./easy-page7.html">Próxima</a>
-      <br>
-      <br>
-      <a href = "./home-easy.html">Home Easy</a> 
-    </p> 
-    
+      <section class="sfacil_conteudo">
+        
+        <p class="sfacil__conteudo_titulo">Título</p>
+
+        <div class="sfacil__conteudo_secao">
+          Tarefa 1 | Seção
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Pergunta
+          </p>  
+          <p class="sfacil__explicacao">
+            Explicação
+          </p>
+          <p class="sfacil__resposta">R: Resposta</p>
+        </div>
+
+        
+      </section>    
+      
+      <section>
+        <div class="sfacil__link">
+            <a href="https://tryhackme.com/room/jrsecanalystintrouxo" class="sfacil__link_sala">Sala Try Hack Me</a>
+            <a href="easy-page2.html" class="sfacil__link_sala">Próxima</a>
+        </div>
+      </section>
+      
+
+    </main> 
+      
   </body>
 </html>

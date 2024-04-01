@@ -1,116 +1,147 @@
 <!DOCTYPE html>
 <html>  
   <head>
-    <meta charset="UTF-8"/>
-      <title>Burp Suite: Repeater</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="UTF-8" ></script>
+    <link rel="stylesheet" href="css/style-easy.css">
   </head>
     
-  <body>       
-    <p style="text-align: right;">
-      <a href="../index.html">Início</a>   
-    </p>  
+  <body>  
 
-    <h1 style="text-align: center;"> Burp Suite: Repeater </h1>    
+    <header class="cabecalho">
+      <h1 class="sfacil__titulo_pagina">Room Easy</h1>
 
-    <br>
+      <a class="cabecalho__botao_inicio" href="../index.html"><img src="/assets/icon-home.png"></a>
 
-    <h3 style="text-align: center;">O que é repetidor?</h3>
-    <p style="text-align: center;">
-      Quais seções nos dão um controle mais intuitivo sobre nossas solicitações? <br> 
-        <font color="green" size="3">R: Inspector</font>
-      <br>
-      <br>
+      <nav>
 
-    <h3 style="text-align: center;">Uso Básico</h3>
-    <p style="text-align: center;">
-      Qual visualização será preenchida ao enviar uma solicitação do módulo Proxy para o Repetidor? <br> 
-        <font color="green" size="3">R: Request</font>
-      <br>
-      <br>
+        <div class="side-bar__menu-btn">
+          <i class="fas fa-bars"></i>
+        </div>
 
-    <h3 style="text-align: center;">Barra de ferramentas de análise de mensagens</h3>
-    <p style="text-align: center;">
-      Qual opção  nos permite visualizar a página como ela apareceria em um navegador da web?<br> 
-        <font color="green" size="3">R: Render</font>
-      <br>
-      <br>
+        <div class="side-bar active">
+          <div class="side-bar__close-btn">
+            <i class="fas fa-times"></i>
+          </div>
+
+          <div class="side-bar__menu">
+
+            <div class="side-bar__menu_item">
+              <a class="side-bar__sub-btn"><img src="../assets/icon-easy.png" class="side-bar__menu_item_seta"> Room Easy<i class="fas fa-angle-right dropdown"></i></a>
+
+              <div class="side-bar__sub-menu">
+                <a href="#"><img src="../assets/icon-seta.png"> Junior Security Analyst Intro</a>
+                <a href="easy-page2.html"><img src="../assets/icon-seta.png"> Introductory Networking</a>
+                <a href="easy-page3.html"><img src="../assets/icon-seta.png"> Investigating Windows</a>
+                <a href="easy-page4.html"><img src="../assets/icon-seta.png"> Picles Rick</a>
+                <a href="easy-page5.html"><img src="../assets/icon-seta.png"> Nesso (Nessus)</a>
+                <a href="easy-page6.html"><img src="../assets/icon-seta.png"> Burp Suite: The Basics</a>
+                <a href="easy-page7.html"><img src="../assets/icon-seta.png"> Burp Suite: Repeater</a>
+                <a href="easy-page8.html"><img src="../assets/icon-seta.png"> OWASP Juice Shop</a>
+                <a href="easy-page9.html"><img src="../assets/icon-seta.png"> Pyramid Of Pain</a>
+                <a href="easy-page10.html"><img src="../assets/icon-seta.png"> SQL Injection</a>
+              </div>
+
+            </div>
+
+
+            <div class="side-bar__menu_item">
+              <a class="side-bar__sub-btn"><img src="../assets/icon-medium.png" class="side-bar__menu_item_seta"> Room Medium<i class="fas fa-angle-right dropdown"></i></a>
+
+              <div class="side-bar__sub-menu">
+                <a href="Medium/medium-page1.html"><img src="../assets/icon-seta.png"> Pentesting Fundamentals</a>
+                <a href="Medium/medium-page2.html"><img src="../assets/icon-seta.png"> Principles of Security</a>
+
+              </div>
+
+            </div>
+
+
+            <div class="side-bar__menu_item">
+              <a class="side-bar__sub-btn"><img src="../assets/icon-hard.png" class="side-bar__menu_item_seta"> Room Hard<i class="fas fa-angle-right dropdown"></i></a>
+
+              <div class="side-bar__sub-menu">
+                <a href="#"><img src="../assets/icon-seta.png"> hard-page1</a>
+
+              </div>
+
+            </div>
+
+            <div class="side-bar__menu_item">
+              <a class="side-bar__sub-btn"><img src="../assets/icon-insano.png" class="side-bar__menu_item_seta"> Room Insane<i class="fas fa-angle-right dropdown"></i></a>
+            
+              <div class="side-bar__sub-menu">
+                <a href="#"><img src="../assets/icon-seta.png"> insane-page1</a>
+
+              </div>
+            
+            </div>
+
+          </div>
+
+        </div>
+
+      </nav>
+    </header>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+        $('.side-bar__sub-btn').click(function(){
+          $(this).next('.side-bar__sub-menu').slideToggle();
+          $(this).find('.dropdown').toggleClass('rotate');
+        });
+
+        $('.side-bar__menu-btn').click(function(){
+          $('.side-bar').addClass('active');
+          $('.side-bar__menu-btn').css("visibility","hidden");
+        });
+
+        $('.side-bar__close-btn').click(function(){
+          $('.side-bar').removeClass('active');
+          $('.side-bar__menu-btn').css("visibility","visible");
+        });
+
+      });
+    </script>
+
+    <main>
+    
+      <section class="sfacil_conteudo">
+        
+        <p class="sfacil__conteudo_titulo">Título</p>
+
+        <div class="sfacil__conteudo_secao">
+          Tarefa 1 | Seção
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Pergunta
+          </p>  
+          <p class="sfacil__explicacao">
+            Explicação
+          </p>
+          <p class="sfacil__resposta">R: Resposta</p>
+        </div>
+
+        
+      </section>    
+      
+      <section>
+        <div class="sfacil__link">
+            <a href="https://tryhackme.com/room/jrsecanalystintrouxo" class="sfacil__link_sala">Sala Try Hack Me</a>
+            <a href="easy-page2.html" class="sfacil__link_sala">Próxima</a>
+        </div>
+      </section>
       
 
-    <h3 style="text-align: center;">Inspetor</h3>
-    <p style="text-align: center;">
-      Qual seção do Inspector é específica para solicitações POST?<br> 
-        <font color="green" size="3">R: Body Parameters</font>
-      <br>
-      <br>
-
-    
-    <h3 style="text-align: center;">Exemplo Prático</h3>
-    <p style="text-align: center;">
-      Qual é a bandeira que você recebe?<br> 
-        <font color="blue" size="3">
-          Método 1: <br> 
-          Passo 1: Intercept uma solicitação do site no módulo Proxy e envie para o Repetidor.<br>
-          Passo 2: Após o envio da solicitação para o repetidor, você deverá ver o código HTML da págnia solicitada na visualização Resposta. <br>
-          Passo 3: Manualmente adicione um cabeçalho chamado <font color="red">FlagAuthorised: True</font>. <br>
-          Passo 4: Envie a solicitação através da aba Repetidor e tenha como retorno a Flag. <br>
-        </font>
-        <font color="green" size="3">R: THM{Yzg2MWI2ZDhlYzdlNGFiZTUzZTIzMzVi}</font>
-      <br>
-      <br>
-
-      <h3 style="text-align: center;">Desafio</h3>
-      <p style="text-align: center;">
-        Qual é o sinalizador que você recebe quando causa um erro 500 no endpoint?<br> 
-          <font color="blue" size="3">
-            Método 1: A ideia é inserir entradas inesperadas para ver como o servidor reagirá. Por exemplo, em vez de um número, você pode inserir um texto ou um símbolo. <br>
-          </font>
-          <font color="green" size="3">R: THM{N2MzMzFhMTA1MmZiYjA2YWQ4M2ZmMzhl}</font>
-        <br>
-        <br>
+    </main> 
       
-      <h3 style="text-align: center;">Desafio de milha extra</h3>
-      <p style="text-align: center;">        
-        Explorar a vulnerabilidade de injeção de união SQL no site. <br>
-        Qual é a bandeira? <br> 
-          <font color="blue" size="3">
-            Método 1: Sabemos que a vulnerabilide existe e onde está. <br><br>
-            Passo 1: Então a solicitação ficará da seguinte forma: <font color="red">GET /products/-1 HTTP/1.1</font>. Com o retorno da solicitação <br>
-            conseguimos identificar que a tabela do banco de dados que estamos selecionando se chama "people", e ela possui 5 colunas, são elas: <br> 
-            "firstName", "lastName", "pfpLink", "role" e "bio". <br><br>
-            Passo 2: Como sabemos o nome da tabela e o número de linhas, podemos usar uma consulta "union" para selecionar os nomes das colunas da <br>
-            "people" tabela na "columns" tabela do "information_schema" banco de dados padrão. <br>
-            Uma consulta simples para isso é a seguinte: <br><br>
-            <font color="#00000">
-              <code style="background-color: lightgrey;" >/about/0 UNION ALL SELECT column_name,null,null,null,null FROM information_schema.columns WHERE table_name="people"</code>
-            </font> <br><br>
-            Passo 3: Extraímos com sucesso o nome da primeira coluna do banco de dados, mas agora temos um problema. A página exibe apenas o <br>
-            primeiro item correspondente  –  precisamos ver todos os itens correspondentes. <br>
-            Felizmente, podemos usar nosso SQLi para agrupar os resultados. Ainda podemos recuperar apenas um resultado de cada vez, mas usando <br>
-            <font color="red">agroup_concat()</font> função, podemos juntar todos os nomes de colunas em uma única saída: <br><br>            
-          </font>
-          <font color="#00000">
-            <code style="background-color: lightgrey;" > /about/0 UNION ALL SELECT group_concat(column_name),null,null,null,null FROM information_schema.columns WHERE table_name="people" </code>
-          </font><br><br>
-          <font color="green" size="3">R: THM{ZGE3OTUyZGMyMzkwNjJmZjg3Mzk1NjJh}</font>
-        <br>
-        <br>
-    </p>    
-    <br>
-    <br>
-
-    <p style="text-align: center;">
-      <a href="https://tryhackme.com/r/room/burpsuiterepeater">Link para a sala no Try Hack Me</a> 
-    </p>
-    
-    <br>
-    <br> 
-    
-    <p style="text-align: center;">
-      <a href="./easy-page6.html">Anterior</a> - <a href="./easy-page8.html">Próxima</a>
-      <br>
-      <br>
-      <a href = "./home-easy.html">Home Easy</a> 
-    </p> 
-
   </body>
 </html>

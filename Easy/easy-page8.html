@@ -1,133 +1,147 @@
 <!DOCTYPE html>
 <html>  
   <head>
-    <meta charset="UTF-8"/>
-      <title>OWASP Juice Shop</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="UTF-8" ></script>
+    <link rel="stylesheet" href="css/style-easy.css">
   </head>
     
-  <body>       
-    <p style="text-align: right;">
-      <a href="../index.html">Início</a>   
-    </p>  
+  <body>  
 
-    <h1 style="text-align: center;"> OWASP Juice Shop </h1>    
+    <header class="cabecalho">
+      <h1 class="sfacil__titulo_pagina">Room Easy</h1>
 
-    <br>
+      <a class="cabecalho__botao_inicio" href="../index.html"><img src="/assets/icon-home.png"></a>
 
-    <h3 style="text-align: center;">Vamos em uma aventura!</h3>
-    <p style="text-align: center;">
-      Qual é o endereço de e-mail do administrador?<br> 
-        <font color="blue" size="3">
-            Método 1: As avaliações mostram o endereço de e-mail de cada usuário. Que, ao clicar no produto Apple Juice, nos mostra o email do Admin!<br>
-          </font>
-        <font color="green" size="3">R: admin@juice-sh.op</font>
-        <br>
-        <br>
-      Qual parâmetro é usado para pesquisa? <br> 
-        <font color="green" size="3">R: q</font>
-      <br>
-      <br>
-      A qual programa Jim faz referência em sua crítica? <br> 
-        <font color="green" size="3">R: Star Trek</font>
-      <br>
-      <br>
+      <nav>
 
-    <h3 style="text-align: center;">Injete o suco</h3>
-    <p style="text-align: center;">
-      Faça login na conta de administrador!<br> 
-        <font color="blue" size="3">
-          Método 1: Tente realizar o login com email e senha aleatórios enquanto o burp captura a solicitação. <br>
-          Após capturar a solicitação altere o email e envie novamente ao servidor com o comando abaixo> <br>
-          <font color="#00000">
-            <code style="background-color: lightgrey;" >{"email":"' or 1=1 --","password":"' or 1=1 --"}</code>
-              </font><br>
-          Isso ocorre porque a solicitação enviada é verdeira (1=1), assim, ele informará ao servidor que o e-mail <br>
-          é válido e nos conectará ao  ID do usuário 0 , que é a conta do administrador.<br>
-        </font>
-        <font color="green" size="3">R: 32a5e0f21372bcc1000a6088b93b458e41f0e02a</font>
-      <br>
-      <br>
-      Faça login na conta do Bender!<br> 
-        <font color="green" size="3">R: fb364762a3c102b2db932069c0e6b78e738d4066</font>
-      <br>
-      <br>
+        <div class="side-bar__menu-btn">
+          <i class="fas fa-bars"></i>
+        </div>
 
-    <h3 style="text-align: center;">Quem quebrou minha fechadura?!</h3>
-    <p style="text-align: center;">
-      Força bruta na senha da conta do administrador!<br> 
-        <font color="green" size="3">R: c2110d06dc6f81c67cd8099ff0ba601241f1ac0e</font>
-      <br>
-      <br>
-      Redefina a senha de Jim!<br> 
-        <font color="green" size="3">R: 094fbc9b48e525150ba97d05b942bbf114987257</font>
-      <br>
-      <br>
- 
-    <h3 style="text-align: center;">AH! Não olhe!</h3>
-    <p style="text-align: center;">
-      Acesse o Documento Confidencial!<br> 
-        <font color="green" size="3">R: edf9281222395a1c5fee9b89e32175f1ccf50c5b</font>
-      <br>
-      <br>
-      Faça login na conta do MC SafeSearch!<br> 
-        <font color="green" size="3">R: 66bdcffad9e698fd534003fbb3cc7e2b7b55d7f0</font>
-      <br>
-      <br>
-      Baixe o arquivo de backup!<br> 
-        <font color="green" size="3">R: bfc1e6b4a16579e85e06fee4c36ff8c02fb13795</font>
-      <br>
-      <br>
+        <div class="side-bar active">
+          <div class="side-bar__close-btn">
+            <i class="fas fa-times"></i>
+          </div>
 
-    <h3 style="text-align: center;">Quem está pilotando essa coisa?</h3>
-    <p style="text-align: center;">
-      Acesse a página de administração!<br> 
-        <font color="green" size="3">R: 946a799363226a24822008503f5d1324536629a0</font>
-      <br>
-      <br>
-      Veja o carrinho de compras de outro usuário!<br> 
-      <font color="green" size="3">R: 41b997a36cc33fbe4f0ba018474e19ae5ce52121</font>
-      <br>
-      <br>
-      Remova todas as avaliações 5 estrelas!<br> 
-      <font color="green" size="3">R: 50c97bcce0b895e446d61c83a21df371ac2266ef</font>
-      <br>
-      <br>
+          <div class="side-bar__menu">
 
-    <h3 style="text-align: center;">De onde veio isso?</h3>
-    <p style="text-align: center;">
-      Execute um DOM XSS !<br> 
-        <font color="green" size="3">R: 9aaf4bbea5c30d00a1f5bbcfce4db6d4b0efe0bf</font>
-      <br>
-      <br>
-      Execute um XSS persistente !<br> 
-        <font color="green" size="3">R: 149aa8ce13d7a4a8a931472308e269c94dc5f156</font>
-      <br>
-      <br>
-        <font color="green" size="3">R: 23cefee1527bde039295b2616eeb29e1edc660a0</font>
-      <br>
-      <br>
+            <div class="side-bar__menu_item">
+              <a class="side-bar__sub-btn"><img src="../assets/icon-easy.png" class="side-bar__menu_item_seta"> Room Easy<i class="fas fa-angle-right dropdown"></i></a>
 
-    <h3 style="text-align: center;">Exploração!</h3>
-    <p style="text-align: center;">   
-      Acesse a  página /#/score-board/<br> 
-        <font color="green" size="3">R: 7efd3174f9dd5baa03a7882027f2824d2f72d86e</font>
-      <br>
-      <br>
+              <div class="side-bar__sub-menu">
+                <a href="#"><img src="../assets/icon-seta.png"> Junior Security Analyst Intro</a>
+                <a href="easy-page2.html"><img src="../assets/icon-seta.png"> Introductory Networking</a>
+                <a href="easy-page3.html"><img src="../assets/icon-seta.png"> Investigating Windows</a>
+                <a href="easy-page4.html"><img src="../assets/icon-seta.png"> Picles Rick</a>
+                <a href="easy-page5.html"><img src="../assets/icon-seta.png"> Nesso (Nessus)</a>
+                <a href="easy-page6.html"><img src="../assets/icon-seta.png"> Burp Suite: The Basics</a>
+                <a href="easy-page7.html"><img src="../assets/icon-seta.png"> Burp Suite: Repeater</a>
+                <a href="easy-page8.html"><img src="../assets/icon-seta.png"> OWASP Juice Shop</a>
+                <a href="easy-page9.html"><img src="../assets/icon-seta.png"> Pyramid Of Pain</a>
+                <a href="easy-page10.html"><img src="../assets/icon-seta.png"> SQL Injection</a>
+              </div>
+
+            </div>
+
+
+            <div class="side-bar__menu_item">
+              <a class="side-bar__sub-btn"><img src="../assets/icon-medium.png" class="side-bar__menu_item_seta"> Room Medium<i class="fas fa-angle-right dropdown"></i></a>
+
+              <div class="side-bar__sub-menu">
+                <a href="Medium/medium-page1.html"><img src="../assets/icon-seta.png"> Pentesting Fundamentals</a>
+                <a href="Medium/medium-page2.html"><img src="../assets/icon-seta.png"> Principles of Security</a>
+
+              </div>
+
+            </div>
+
+
+            <div class="side-bar__menu_item">
+              <a class="side-bar__sub-btn"><img src="../assets/icon-hard.png" class="side-bar__menu_item_seta"> Room Hard<i class="fas fa-angle-right dropdown"></i></a>
+
+              <div class="side-bar__sub-menu">
+                <a href="#"><img src="../assets/icon-seta.png"> hard-page1</a>
+
+              </div>
+
+            </div>
+
+            <div class="side-bar__menu_item">
+              <a class="side-bar__sub-btn"><img src="../assets/icon-insano.png" class="side-bar__menu_item_seta"> Room Insane<i class="fas fa-angle-right dropdown"></i></a>
+            
+              <div class="side-bar__sub-menu">
+                <a href="#"><img src="../assets/icon-seta.png"> insane-page1</a>
+
+              </div>
+            
+            </div>
+
+          </div>
+
+        </div>
+
+      </nav>
+    </header>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+        $('.side-bar__sub-btn').click(function(){
+          $(this).next('.side-bar__sub-menu').slideToggle();
+          $(this).find('.dropdown').toggleClass('rotate');
+        });
+
+        $('.side-bar__menu-btn').click(function(){
+          $('.side-bar').addClass('active');
+          $('.side-bar__menu-btn').css("visibility","hidden");
+        });
+
+        $('.side-bar__close-btn').click(function(){
+          $('.side-bar').removeClass('active');
+          $('.side-bar__menu-btn').css("visibility","visible");
+        });
+
+      });
+    </script>
+
+    <main>
+    
+      <section class="sfacil_conteudo">
+        
+        <p class="sfacil__conteudo_titulo">Título</p>
+
+        <div class="sfacil__conteudo_secao">
+          Tarefa 1 | Seção
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Pergunta
+          </p>  
+          <p class="sfacil__explicacao">
+            Explicação
+          </p>
+          <p class="sfacil__resposta">R: Resposta</p>
+        </div>
+
+        
+      </section>    
       
-    </p>    
-    <br>
-    <br>
+      <section>
+        <div class="sfacil__link">
+            <a href="https://tryhackme.com/room/jrsecanalystintrouxo" class="sfacil__link_sala">Sala Try Hack Me</a>
+            <a href="easy-page2.html" class="sfacil__link_sala">Próxima</a>
+        </div>
+      </section>
+      
 
-    <p style="text-align: center;">
-      <a href="https://tryhackme.com/room/owaspjuiceshop">Link para a sala no Try Hack Me</a> 
-    </p>
-    
-    <br>
-    <br> 
-    
-    <p style="text-align: center;">
-      <a href="./easy-page7.html">Anterior</a> - <a href="./easy-page9.html">Próxima</a>
-      <br>
-      <br>
-      <a href = "./home-easy.html">Home Easy</a> 
-    </p> 
+    </main> 
+      
+  </body>
+</html>
