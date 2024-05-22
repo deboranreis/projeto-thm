@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Título</title>
+    <title>Picles Rick</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="UTF-8" ></script>
@@ -15,106 +15,17 @@
 
     <header class="cabecalho">
       <h1 class="sfacil__titulo_pagina">Room Easy</h1>
-
-      <a class="cabecalho__botao_inicio" href="../index.html"><img src="/assets/icon-home.png"></a>
-
+      <a class="cabecalho__botao_inicio" href="../index.html"><img src="../assets/icon-home.png"></a>
       <nav>
-
-        <div class="side-bar__menu-btn">
-          <i class="fas fa-bars"></i>
-        </div>
-
-        <div class="side-bar active">
-          <div class="side-bar__close-btn">
-            <i class="fas fa-times"></i>
-          </div>
-
-          <div class="side-bar__menu">
-
-            <div class="side-bar__menu_item">
-              <a class="side-bar__sub-btn"><img src="../assets/icon-easy.png" class="side-bar__menu_item_seta"> Room Easy<i class="fas fa-angle-right dropdown"></i></a>
-
-              <div class="side-bar__sub-menu">
-                <a href="#"><img src="../assets/icon-seta.png"> Junior Security Analyst Intro</a>
-                <a href="easy-page2.html"><img src="../assets/icon-seta.png"> Introductory Networking</a>
-                <a href="easy-page3.html"><img src="../assets/icon-seta.png"> Investigating Windows</a>
-                <a href="easy-page4.html"><img src="../assets/icon-seta.png"> Picles Rick</a>
-                <a href="easy-page5.html"><img src="../assets/icon-seta.png"> Nesso (Nessus)</a>
-                <a href="easy-page6.html"><img src="../assets/icon-seta.png"> Burp Suite: The Basics</a>
-                <a href="easy-page7.html"><img src="../assets/icon-seta.png"> Burp Suite: Repeater</a>
-                <a href="easy-page8.html"><img src="../assets/icon-seta.png"> OWASP Juice Shop</a>
-                <a href="easy-page9.html"><img src="../assets/icon-seta.png"> Pyramid Of Pain</a>
-                <a href="easy-page10.html"><img src="../assets/icon-seta.png"> SQL Injection</a>
-              </div>
-
-            </div>
-
-
-            <div class="side-bar__menu_item">
-              <a class="side-bar__sub-btn"><img src="../assets/icon-medium.png" class="side-bar__menu_item_seta"> Room Medium<i class="fas fa-angle-right dropdown"></i></a>
-
-              <div class="side-bar__sub-menu">
-                <a href="Medium/medium-page1.html"><img src="../assets/icon-seta.png"> Pentesting Fundamentals</a>
-                <a href="Medium/medium-page2.html"><img src="../assets/icon-seta.png"> Principles of Security</a>
-
-              </div>
-
-            </div>
-
-
-            <div class="side-bar__menu_item">
-              <a class="side-bar__sub-btn"><img src="../assets/icon-hard.png" class="side-bar__menu_item_seta"> Room Hard<i class="fas fa-angle-right dropdown"></i></a>
-
-              <div class="side-bar__sub-menu">
-                <a href="#"><img src="../assets/icon-seta.png"> hard-page1</a>
-
-              </div>
-
-            </div>
-
-            <div class="side-bar__menu_item">
-              <a class="side-bar__sub-btn"><img src="../assets/icon-insano.png" class="side-bar__menu_item_seta"> Room Insane<i class="fas fa-angle-right dropdown"></i></a>
-            
-              <div class="side-bar__sub-menu">
-                <a href="#"><img src="../assets/icon-seta.png"> insane-page1</a>
-
-              </div>
-            
-            </div>
-
-          </div>
-
-        </div>
-
+        <div id="menu-container"></div>
       </nav>
     </header>
-
-    <script type="text/javascript">
-      $(document).ready(function(){
-
-        $('.side-bar__sub-btn').click(function(){
-          $(this).next('.side-bar__sub-menu').slideToggle();
-          $(this).find('.dropdown').toggleClass('rotate');
-        });
-
-        $('.side-bar__menu-btn').click(function(){
-          $('.side-bar').addClass('active');
-          $('.side-bar__menu-btn').css("visibility","hidden");
-        });
-
-        $('.side-bar__close-btn').click(function(){
-          $('.side-bar').removeClass('active');
-          $('.side-bar__menu-btn').css("visibility","visible");
-        });
-
-      });
-    </script>
 
     <main>
     
       <section class="sfacil_conteudo">
         
-        <p class="sfacil__conteudo_titulo">Título</p>
+        <p class="sfacil__conteudo_titulo">Picles Rick</p>
 
         <div class="sfacil__conteudo_secao">
           Tarefa 1 | Seção
@@ -135,13 +46,56 @@
       
       <section>
         <div class="sfacil__link">
-            <a href="https://tryhackme.com/room/jrsecanalystintrouxo" class="sfacil__link_sala">Sala Try Hack Me</a>
-            <a href="easy-page2.html" class="sfacil__link_sala">Próxima</a>
+            <a href="easy-page3.html" class="sfacil__link_sala">Anterior</a>
+            <a href="https://tryhackme.com/r/room/picklerick" class="sfacil__link_sala">Sala Try Hack Me</a>
+            <a href="easy-page5.html" class="sfacil__link_sala">Próxima</a>
         </div>
       </section>
       
 
     </main> 
       
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        fetch('../Menu/menu.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('menu-container').innerHTML = data;
+  
+            // Add the click event handlers after loading the menu
+            document.querySelectorAll('.side-bar__sub-btn').forEach(function(btn) {
+              btn.addEventListener('click', function() {
+                let subMenu = btn.nextElementSibling;
+                if (subMenu) {
+                  subMenu.classList.toggle('show');
+                  btn.querySelector('.dropdown').classList.toggle('rotate');
+                }
+              });
+            });
+  
+            document.querySelector('.side-bar__menu-btn').addEventListener('click', function() {
+              let sideBar = document.querySelector('.side-bar');
+              sideBar.classList.toggle('active');
+              document.querySelector('.side-bar__menu-btn').style.visibility = sideBar.classList.contains('active') ? 'hidden' : 'visible';
+            });
+  
+            document.querySelector('.side-bar__close-btn').addEventListener('click', function() {
+              let sideBar = document.querySelector('.side-bar');
+              sideBar.classList.remove('active');
+              document.querySelector('.side-bar__menu-btn').style.visibility = 'visible';
+              
+              // Reset submenus
+              document.querySelectorAll('.side-bar__sub-menu').forEach(function(subMenu) {
+                subMenu.classList.remove('show');
+              });
+              // Reset dropdown icons
+              document.querySelectorAll('.side-bar__sub-btn .dropdown').forEach(function(icon) {
+                icon.classList.remove('rotate');
+              });
+            });
+          });
+      });
+    </script>
+
   </body>
 </html>

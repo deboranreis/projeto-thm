@@ -6,11 +6,11 @@
     --branco: #f6f6f6;
     --side-bar: #113463;
     --side-bar-submenu: #184683;
-    --laranja: #ffba05;
+    --azul: #05ffff;
     --cinza: #434242b0;
-    --verdinho: #2dd888;
+    --azulzinho: #2dd2d8;
     --back-resposta: #f6f6f62c;
-    --back-secao: #2dd88869;
+    --back-secao: #2db9d88b;
 
     --fonte-titulo: "Krona One", sans-serif;
     --fonte-texto: "Montserrat", sans-serif;
@@ -53,7 +53,7 @@ body{
     font-weight: 300px;
     gap: 10px;
     align-items: center;
-    color: var(--verdinho);
+    color: var(--azulzinho);
     width: 2400px;
     align-items: center;
     justify-content: center;
@@ -68,7 +68,7 @@ body{
     color: var(--branco);
     gap: 30px;
     background-size:contain;
-    border: 2px solid var(--verdinho);
+    border: 2px solid var(--azulzinho);
     border-radius: 14px;
 }
 
@@ -102,90 +102,6 @@ body{
     align-items: center;
 }
 
-.side-bar{
-    background: var(--side-bar);
-    backdrop-filter: blur(15px);
-    width: 350px;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: -100%;
-    overflow-y: auto;
-    transition: 0.6s ease;
-    transition-property: left;
-}
-
-.side-bar.active{
-    left: 0;
-}
-
-.side-bar__menu{
-    width: 100%;
-    margin-top: 80px;
-}
-
-.side-bar__menu_item{
-    position: relative;
-    cursor: pointer;
-}
-
-.side-bar__menu_item a{
-    color: var(--branco);
-    font-size: 1rem;
-    text-decoration: none;
-    padding: 5px 30px;
-    line-height: 60px;
-    display: block;
-}
-
-.side-bar__menu_item a:hover{
-    background: var(--azul-neon);
-    transition: 0.3s ease;
-    color: var(--background);
-}
-
-.side-bar .menu .item i{
-    margin-right: 15px;
-}
-
-.side-bar__menu_item a .dropdown{
-    position: absolute;
-    right: 0;
-    margin: 20px;
-    transition: 0.3s ease;
-}
-
-.side-bar__sub-menu{
-    background: var(--side-bar-submenu);
-    display: none;
-}
-
-.side-bar__sub-menu a{
-    padding-left: 45px;
-}
-
-.rotate{
-    transform: rotate(90deg);
-}
-
-.side-bar__menu-btn{    
-    position: absolute;
-    color: var(--branco);
-    font-size: 1.25rem;
-    left: 0;
-    margin: 25px;
-    cursor: pointer;
-}
-
-.side-bar__close-btn{  
-    position: absolute;
-    color: var(--branco);
-    font-size: 1.25rem;
-    right: 0;
-    margin: 25px;
-    cursor: pointer;
-}
-
 .dash__link{
     display: flex;
     gap: 15px;
@@ -201,7 +117,7 @@ body{
     align-items: center;
     justify-content:  center;
     border-radius: 14px;
-    border: 2px solid var(--verdinho);
+    border: 2px solid var(--azulzinho);
     font-size: 0.875rem;
     font-weight: 600;
     text-decoration: none;
@@ -241,7 +157,7 @@ body{
 }
 
 .dash__resposta{
-    color: var(--verdinho);
+    color: var(--azulzinho);
     font-weight: 800px;
     font-size: 0.875rem;
     font-family: var(--fonte-texto);

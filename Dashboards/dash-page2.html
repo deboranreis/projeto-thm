@@ -1,158 +1,145 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lawyer Corp</title>
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="UTF-8"></script>
-  <link rel="stylesheet" href="css/style-dash.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lawyer Corp</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style-dash.css">
+    <link rel="stylesheet" href="../Menu/css/style-menu.css">
 </head>
 <body>
+  <header class="cabecalho">
+    <h1 class="dash__titulo_pagina">Militech</h1>
+    <a class="cabecalho__botao_inicio" href="../index.html"><img src="../assets/icon-home.png"></a>
+    <nav>
+      <div id="menu-container"></div>
+    </nav>
+  </header>
+  <main>
+    <section class="dash_conteudo">
+        
+      <div class="dash__conteudo_secao">
+        Brienfing para criação de dashboard
+      </div>
 
-<header class="cabecalho">
-  <h1 class="dash__titulo_pagina">Dashboard</h1>
+      <div class="dash__conteudo_texto">          
+        <p class="dash__resposta">Informações Gerais</p>
+          <p class="dash__explicacao">
+            
 
-  <script type="text/javascript">
-    $(document).ready(function(){
-      $('.side-bar__sub-btn').click(function(){
-        $(this).next('.side-bar__sub-menu').slideToggle();
-        $(this).find('.dropdown').toggleClass('rotate');
-      });
+            <table>
+              <tr>
+                <th>Título do dashboard</th>
+                <td>Lawyer Corp</td>
+              </tr>
+              <tr>
+                <th>Público-alvo</th>
+                <td>Gestão de advogados da Lawyer Corp</td>
+              </tr>
+              <tr>
+                <th>Objetivo principal</th>
+                <td>Acompanhar as métricas de atendimentos realizados por advogado.</td>
+              </tr>
+              <tr>
+                <th>Objetivos secundários</th>
+                <td>Identificar o tipo de atendimento mais realizado e quais os períodos do ano em que existem mais atendimentos.</td>
+              </tr>
+              <tr>
+                <th>Metas estabelecidas</th>
+                <td>Os dados devem estar em uma única página e serem de fácil entendimento.</td>
+              </tr>
+              <tr>
+                <th>Formato de visualização</th>
+                <td>Gráficos e cards.</td>
+              </tr>
+              <tr>
+                <th>Período de visualização</th>
+                <td>Final de 2023 até o final de 2024</td>
+              </tr>
+              <tr>
+                <th>Recorrência da visualização</th>
+                <td>Diária</td>
+              </tr>
+              <tr>
+                <th colspan="2"><br>Fontes de dados</th>
+              </tr>
+              <tr>
+                <td class="tcenter" colspan="2">Planilha de atendimentos da Lawyer Corp. Todos os dados são fictícios.</td>
+              </tr>
+              <tr>
+                <th colspan="2"><br>Observações</th>
+              </tr>
+              <tr>
+                <td class="tcenter" colspan="2">Sem Observações.</td>
+              </tr>
+            </table>
+
+
+      </div>
+
+      <div class="dash__conteudo_secao">
+        Dash
+      </div>
+
+      <div class="dash__conteudo_dash">
+        <iframe width="1270" height="1010" src="https://lookerstudio.google.com/embed/reporting/9299b0a8-0ed7-43e0-aedb-fb2af1159acf/page/YbX0D" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+        
+      </div>
+
+      
+    </section>    
     
-      $('.side-bar__menu-btn').click(function(){
-        $('.side-bar').toggleClass('active');
-      });
+    <section>
+      <div class="dash__link">
+          <a href="https://docs.google.com/spreadsheets/d/1dLJfhWbUoXD4Rrp01FtwUpXjjyFNDbOerNaMaULIypI/edit?usp=sharing" class="dash__link_sala">Base dados</a>
+          <a href="dash-page2.html" class="dash__link_sala">Próxima</a>
+      </div>
+    </section>
     
-      $('.side-bar__close-btn').click(function(){
-        $('.side-bar').removeClass('active');
-      });
+  </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      fetch('../Menu/menu.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('menu-container').innerHTML = data;
+
+          // Add the click event handlers after loading the menu
+          document.querySelectorAll('.side-bar__sub-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+              let subMenu = btn.nextElementSibling;
+              if (subMenu) {
+                subMenu.classList.toggle('show');
+                btn.querySelector('.dropdown').classList.toggle('rotate');
+              }
+            });
+          });
+
+          document.querySelector('.side-bar__menu-btn').addEventListener('click', function() {
+            let sideBar = document.querySelector('.side-bar');
+            sideBar.classList.toggle('active');
+            document.querySelector('.side-bar__menu-btn').style.visibility = sideBar.classList.contains('active') ? 'hidden' : 'visible';
+          });
+
+          document.querySelector('.side-bar__close-btn').addEventListener('click', function() {
+            let sideBar = document.querySelector('.side-bar');
+            sideBar.classList.remove('active');
+            document.querySelector('.side-bar__menu-btn').style.visibility = 'visible';
+            
+            // Reset submenus
+            document.querySelectorAll('.side-bar__sub-menu').forEach(function(subMenu) {
+              subMenu.classList.remove('show');
+            });
+            // Reset dropdown icons
+            document.querySelectorAll('.side-bar__sub-btn .dropdown').forEach(function(icon) {
+              icon.classList.remove('rotate');
+            });
+          });
+        });
     });
-    </script>
-
-  <a class="cabecalho__botao_inicio" href="../index.html"><img src="../assets/icon-home.png"></a>
-  <nav>
-    <div class="side-bar__menu-btn">
-      <i class="fas fa-bars"></i>
-    </div>
-    <div class="side-bar">
-      <div class="side-bar__close-btn">
-        <i class="fas fa-times"></i>
-      </div>
-      <div class="side-bar__menu">
-        <div class="side-bar__menu_item">
-          <a class="side-bar__sub-btn"><img src="../assets/Menu-thm.png" class="side-bar__menu_item_seta"> Resoluções Try Hack Me<i class="fas fa-angle-right dropdown"></i></a>
-          <div class="side-bar__sub-menu">
-            <a class="side-bar__sub-btn"><img src="../assets/icon-easy.png" class="side-bar__menu_item_seta"> Room Easy<i class="fas fa-angle-right dropdown"></i></a>
-            <div class="side-bar__sub-menu">
-              <a href="../Easy/easy-page1.html"><img src="../assets/icon-seta.png"> Junior Security Analyst Intro</a>
-              <a href="../Easy/easy-page2.html"><img src="../assets/icon-seta.png"> Introductory Networking</a>
-              <a href="../Easy/easy-page3.html"><img src="../assets/icon-seta.png"> Investigating Windows</a>
-              <a href="../Easy/easy-page4.html"><img src="../assets/icon-seta.png"> Picles Rick</a>
-              <a href=".//Easy/easy-page5.html"><img src="../assets/icon-seta.png"> Nesso (Nessus)</a>
-              <a href=".//Easy/easy-page6.html"><img src="../assets/icon-seta.png"> Burp Suite: The Basics</a>
-              <a href=".//Easy/easy-page7.html"><img src="../assets/icon-seta.png"> Burp Suite: Repeater</a>
-              <a href=".//Easy/easy-page8.html"><img src="../assets/icon-seta.png"> OWASP Juice Shop</a>
-              <a href=".//Easy/easy-page9.html"><img src="../assets/icon-seta.png"> Pyramid Of Pain</a>
-              <a href=".//Easy/easy-page10.html"><img src="../assets/icon-seta.png"> SQL Injection</a>
-            </div>
-            <a class="side-bar__sub-btn"><img src="../assets/icon-medium.png" class="side-bar__menu_item_seta"> Room Medium<i class="fas fa-angle-right dropdown"></i></a>
-            <div class="side-bar__sub-menu">
-              <a href="../Medium/medium-page1.html"><img src="../assets/icon-seta.png"> Pentesting Fundamentals</a>
-              <a href="../Medium/medium-page2.html"><img src="../assets/icon-seta.png"> Principles of Security</a>
-            </div>
-            <a class="side-bar__sub-btn"><img src="../assets/icon-hard.png" class="side-bar__menu_item_seta"> Room Hard<i class="fas fa-angle-right dropdown"></i></a>
-            <div class="side-bar__sub-menu">
-              <a href="#"><img src="../assets/icon-seta.png"> hard-page1</a>
-            </div>
-            <a class="side-bar__sub-btn"><img src="../assets/icon-insano.png" class="side-bar__menu_item_seta"> Room Insane<i                 class="fas fa-angle-right dropdown"></i></a>
-            <div class="side-bar__sub-menu">
-              <a href="#"><img src="../assets/icon-seta.png"> insane-page1</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</nav>
-</header>
-
-<main>
-<section class="dash_conteudo">
-  <p class="dash__conteudo_titulo">Lawyer Corp</p>
-  <div class="dash__conteudo_secao">
-    Brienfing para criação de dashboard
-  </div>
-  <div class="dash__conteudo_texto">
-    <p class="dash__resposta">Informações Gerais</p>
-    <p class="dash__explicacao">
-      <table>
-        <tr>
-          <th>Título do dashboard</th>
-          <td>Lawyer Corp</td>
-        </tr>
-        <tr>
-          <th>Público-alvo</th>
-          <td>Gestão de advogados da Lawyer Corp</td>
-        </tr>
-        <tr>
-          <th>Objetivo principal</th>
-          <td>Acompanhar as métricas de atendimentos realizados por advogado.</td>
-        </tr>
-        <tr>
-          <th>Objetivos secundários</th>
-          <td>Identificar o tipo de atendimento mais realizado e quais os períodos do ano em que existem mais atendimentos.</td>
-        </tr>
-        <tr>
-          <th>Metas estabelecidas</th>
-          <td>Os dados devem estar em uma única página e serem de fácil entendimento.</td>
-        </tr>
-        <tr>
-          <th>Formato de visualização</th>
-          <td>Gráficos e cards.</td>
-        </tr>
-        <tr>
-          <th>Período de visualização</th>
-          <td>Final de 2023 até o final de 2024</td>
-        </tr>
-        <tr>
-          <th>Recorrência da visualização</th>
-          <td>Diária</td>
-        </tr>
-        <tr>
-          <th colspan="2"><br>Fontes de dados</th>
-        </tr>
-        <tr>
-          <td class="tcenter" colspan="2">Planilha de atendimentos da Lawyer Corp. Todos os dados são fictícios.</td>
-        </tr>
-        <tr>
-          <th colspan="2"><br>Observações</th>
-        </tr>
-        <tr>
-          <td class="tcenter" colspan="2">Sem Observações.</td>
-        </tr>
-      </table>
-    </p>
-  </div>
-  <div class="dash__conteudo_secao">
-    Dash
-  </div>
-  <div class="dash__conteudo_dash">
-    <iframe width="1270" height="1010" src="https://lookerstudio.google.com/embed/reporting/9299b0a8-0ed7-43e0-aedb-fb2af1159acf/page/YbX0D" frameborder="0" style="border:0" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
-  </div>
-</section>
-<section>
-  <div class="dash__link">
-    <a href="https://docs.google.com/spreadsheets/d/1dLJfhWbUoXD4Rrp01FtwUpXjjyFNDbOerNaMaULIypI/edit?usp=sharing" class="dash__link_sala">Base dados</a>
-    <a href="dash-page2.html" class="dash__link_sala">Próxima</a>
-  </div>
-</section>
-</main>
-
-
-
+  </script>
 </body>
 </html>
-

@@ -8,8 +8,9 @@
     --side-bar-submenu: #184683;
     --laranja: #ffba05;
     --cinza: #434242b0;
-    --back-resposta: #f6f6f607;
-    --back-secao: #ffb80586;
+    --Vermelhinho: #d82d2d;
+    --back-resposta: #f6f6f62c;
+    --back-secao: #d82d2d69;
 
     --fonte-titulo: "Krona One", sans-serif;
     --fonte-texto: "Montserrat", sans-serif;
@@ -47,12 +48,12 @@ body{
     padding: 20px 80px 5px 80px;
     flex-direction: column;
     text-align: center;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: var(--fonte-texto);
     font-weight: 300px;
     gap: 10px;
     align-items: center;
-    color: var(--laranja);
+    color: var(--Vermelhinho);
     width: 2400px;
     align-items: center;
     justify-content: center;
@@ -67,7 +68,7 @@ body{
     color: var(--branco);
     gap: 30px;
     background-size:contain;
-    border: 2px solid var(--laranja);
+    border: 2px solid var(--Vermelhinho);
     border-radius: 14px;
 }
 
@@ -77,16 +78,16 @@ body{
     flex-direction: column;
     text-align: center;
     font-family: var(--fonte-titulo);
-    font-size: 18px;
+    font-size: 1.125rem;
     color: var(--branco);
 }
 
 .sfacil__conteudo_texto{
     display: flex;
-    padding: 20px 80px 5px 80px;
+    padding: 20px 80px 10px 80px;
     flex-direction: column;
     text-align: center;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-family: var(--fonte-texto);
     font-weight: 300px;
     gap: 10px;
@@ -107,7 +108,7 @@ body{
 }
 
 .side-bar.active{
-    left: 00;
+    left: 0;
 }
 
 .side-bar__menu{
@@ -122,7 +123,7 @@ body{
 
 .side-bar__menu_item a{
     color: var(--branco);
-    font-size: 16px;
+    font-size: 1rem;
     text-decoration: none;
     padding: 5px 30px;
     line-height: 60px;
@@ -162,7 +163,7 @@ body{
 .side-bar__menu-btn{    
     position: absolute;
     color: var(--branco);
-    font-size: 20px;
+    font-size: 1.25rem;
     left: 0;
     margin: 25px;
     cursor: pointer;
@@ -171,7 +172,7 @@ body{
 .side-bar__close-btn{  
     position: absolute;
     color: var(--branco);
-    font-size: 20px;
+    font-size: 1.25rem;
     right: 0;
     margin: 25px;
     cursor: pointer;
@@ -192,8 +193,8 @@ body{
     align-items: center;
     justify-content:  center;
     border-radius: 14px;
-    border: 2px solid var(--azul-neon);
-    font-size: 14px;
+    border: 2px solid var(--Vermelhinho);
+    font-size: 0.875rem;
     font-weight: 600;
     text-decoration: none;
     color: var(--branco);
@@ -201,7 +202,7 @@ body{
 }
 
 .sfacil__link a:hover{
-    background: var(--azul-neon);
+    background: var(--back-secao);
     transition: 0.3s ease;
     color: var(--background);
 }
@@ -209,13 +210,13 @@ body{
 .sfacil__conteudo_secao{
     display: flex;
     color: var(--background);
-    font-weight: 800px;
-    font-size: 14px;
+    font-weight: 50rem;
+    font-size: 0.875rem;
     font-family: var(--fonte-titulo);
     background-color: var(--back-secao);
-    height: 30px;
-    width: 1200px;
-    border-radius: 4px;
+    padding: 1%;
+    width: 105%;
+    border-radius: 0.25rem;
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
@@ -232,9 +233,9 @@ body{
 }
 
 .sfacil__resposta{
-    color: var(--laranja);
+    color: var(--Vermelhinho);
     font-weight: 800px;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-family: var(--fonte-texto);
     background-color: var(--back-resposta);
     height: auto;
@@ -244,11 +245,67 @@ body{
 
 .sfacil__resposta_codigo{
 	text-align: left;
-	width: 500px;
-	padding: 20px;
-	background-color: var(--cinza);
-    border-left: 4px solid var(--azul-neon);
+    color: var(--branco);
+    font-family: courier, monospace;
 }
+
+.fakeButtons {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    position: relative;
+    top: 6px;
+    left: 6px;
+    background-color: #ff3b47;
+    border-color: #9d252b;
+    display: inline-block;
+  }
+  
+  .fakeMinimize {
+    left: 11px;
+    background-color: #ffc100;
+    border-color: #9d802c;
+  }
+  
+  .fakeZoom {
+    left: 16px;
+    background-color: #00d742;
+    border-color: #049931;
+  }
+  
+  .fakeMenu {
+    width: 100%;
+    box-sizing: border-box;
+    height: 30px;
+    background-color: #bbb;
+    margin: 0 auto;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+
+.fakeScreen {
+    background-color: #151515;
+    box-sizing: border-box;
+    width: 550px;
+    margin: 0 auto;
+    padding: 20px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+
+@media (max-width: 700px) {
+    .fakeMenu {
+        width: 100%;
+        height: 30px;
+      }
+
+    .fakeScreen {
+        width: 100%;
+      }
+}
+
 
 
 #code{

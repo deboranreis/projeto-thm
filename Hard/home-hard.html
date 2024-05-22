@@ -1,25 +1,102 @@
 <!DOCTYPE html>
 <html>  
   <head>
-    <meta charset="UTF-8"/>
-      <title>Home das máquinas hard</title>
-      <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo Hard</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="UTF-8" ></script>
+    <link rel="stylesheet" href="./css/style-hard.css">
+    <link rel="stylesheet" href="../Menu/css/style-menu.css">
   </head>
     
-  <body>
+  <body>  
 
-    <p style="text-align: right;">
-      <a href="../index.html">Início</a> | <a href="../Easy/home-easy.html">Máquinas Easy</a> | <a href="../Medium/home-medium.html">Máquinas Medium</a> | <a href="../Insane/home-insane.html">Máquinas Insane</a>    
-    </p> 
+    <header class="cabecalho">
+      <h1 class="sfacil__titulo_pagina">Room Hard</h1>
+      <a class="cabecalho__botao_inicio" href="../index.html"><img src="../assets/icon-home.png"></a>
+      <nav>
+        <div id="menu-container"></div>
+      </nav>
+    </header>
+
+    <main>
     
-    <p>
-      Nesta página você poderá escolher a máquina de nível difíceis (hard) que deseja ver a resolução.
-    </p>
+      <section class="sfacil_conteudo">
+        
+        <p class="sfacil__conteudo_titulo">Modelo Hard</p>
 
-    <p>
-      <a href=""></a><br>
-      <a href=""></a>
-    </p>
+        <div class="sfacil__conteudo_secao">
+          Tarefa 1 | Seção
+        </div>
+
+        <div class="sfacil__conteudo_texto">
+          <p>
+            <img src="/assets/icon-seta-pergunta.png" class="sfacil__pergunta">Pergunta
+          </p>  
+          <p class="sfacil__explicacao">
+            Explicação
+          </p>
+          <p class="sfacil__resposta">R: Resposta</p>
+        </div>
+
+        
+      </section>    
+      
+      <section>
+        <div class="sfacil__link">
+            <a href="#" class="sfacil__link_sala">Anterior</a>
+            <a href="#" class="sfacil__link_sala">Sala Try Hack Me</a>
+            <a href="#" class="sfacil__link_sala">Próxima</a>
+        </div>
+      </section>
+      
+
+    </main> 
+      
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        fetch('../Menu/menu.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('menu-container').innerHTML = data;
+  
+            // Add the click event handlers after loading the menu
+            document.querySelectorAll('.side-bar__sub-btn').forEach(function(btn) {
+              btn.addEventListener('click', function() {
+                let subMenu = btn.nextElementSibling;
+                if (subMenu) {
+                  subMenu.classList.toggle('show');
+                  btn.querySelector('.dropdown').classList.toggle('rotate');
+                }
+              });
+            });
+  
+            document.querySelector('.side-bar__menu-btn').addEventListener('click', function() {
+              let sideBar = document.querySelector('.side-bar');
+              sideBar.classList.toggle('active');
+              document.querySelector('.side-bar__menu-btn').style.visibility = sideBar.classList.contains('active') ? 'hidden' : 'visible';
+            });
+  
+            document.querySelector('.side-bar__close-btn').addEventListener('click', function() {
+              let sideBar = document.querySelector('.side-bar');
+              sideBar.classList.remove('active');
+              document.querySelector('.side-bar__menu-btn').style.visibility = 'visible';
+              
+              // Reset submenus
+              document.querySelectorAll('.side-bar__sub-menu').forEach(function(subMenu) {
+                subMenu.classList.remove('show');
+              });
+              // Reset dropdown icons
+              document.querySelectorAll('.side-bar__sub-btn .dropdown').forEach(function(icon) {
+                icon.classList.remove('rotate');
+              });
+            });
+          });
+      });
+    </script>
 
   </body>
 </html>
