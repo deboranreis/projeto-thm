@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --background: #06182f;
+    --azul-neon: #22D4FD;
+    --branco: #f6f6f6;
+    --side-bar: #113463;
+    --side-bar-submenu: #184683;
+    --laranja: #ffba05;
+    --cinza: #434242b0;
+    --verdinho: #2dd888;
+    --back-resposta: #f6f6f62c;
+    --back-secao: #2dd88869;
+
+    --fonte-titulo: "Krona One", sans-serif;
+    --fonte-texto: "Montserrat", sans-serif;
+}
+  
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--background);
+    box-sizing: border-box;
+    height: 100vh;
+    min-height: 100vh;
+}
+
+.cabecalho{
+    display: flex;
+    justify-content: flex-end;
+    padding: 0px 20px;
+}
+
+.cabecalho__botao_inicio{
+    display: flex;
+    width: 24px;
+    height: 24px;
+    margin: 25px;
+    border-radius: 16px;
+}
+
+.dash__titulo_pagina{
+    display: flex;
+    padding: 20px 80px 5px 80px;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: var(--fonte-texto);
+    font-weight: 300px;
+    gap: 10px;
+    align-items: center;
+    color: var(--verdinho);
+    width: 2400px;
+    align-items: center;
+    justify-content: center;
+}
+
+.dash_conteudo{
+    display: flex;
+    margin: 15px 40px;
+    padding: 15px 50px; 
+    flex-direction: column;
+    align-items: center;
+    color: var(--branco);
+    gap: 30px;
+    background-size:contain;
+    border: 2px solid var(--verdinho);
+    border-radius: 14px;
+}
+
+.dash__conteudo_titulo{
+    display: flex;
+    margin: 15px 10px;
+    flex-direction: column;
+    text-align: center;
+    font-family: var(--fonte-titulo);
+    font-size: 1.125rem;
+    color: var(--branco);
+}
+
+.dash__conteudo_texto{
+    display: flex;
+    padding: 20px 80px 10px 80px;
+    flex-direction: column;
+    text-align: center;
+    font-size: 0.875rem;
+    font-family: var(--fonte-texto);
+    font-weight: 300px;
+    gap: 10px;
+    align-items: center;
+}
+
+.dash__conteudo_dash{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    align-items: center;
+}
+
+.side-bar{
+    background: var(--side-bar);
+    backdrop-filter: blur(15px);
+    width: 350px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    overflow-y: auto;
+    transition: 0.6s ease;
+    transition-property: left;
+}
+
+.side-bar.active{
+    left: 00;
+}
+
+.side-bar__menu{
+    width: 100%;
+    margin-top: 80px;
+}
+
+.side-bar__menu_item{
+    position: relative;
+    cursor: pointer;
+}
+
+.side-bar__menu_item a{
+    color: var(--branco);
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 5px 30px;
+    line-height: 60px;
+    display: block;
+}
+
+.side-bar__menu_item a:hover{
+    background: var(--azul-neon);
+    transition: 0.3s ease;
+    color: var(--background);
+}
+
+.side-bar .menu .item i{
+    margin-right: 15px;
+}
+
+.side-bar__menu_item a .dropdown{
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    transition: 0.3s ease;
+}
+
+.side-bar__sub-menu{
+    background: var(--side-bar-submenu);
+    display: none;
+}
+
+.side-bar__sub-menu a{
+    padding-left: 45px;
+}
+
+.rotate{
+    transform: rotate(90deg);
+}
+
+.side-bar__menu-btn{    
+    position: absolute;
+    color: var(--branco);
+    font-size: 1.25rem;
+    left: 0;
+    margin: 25px;
+    cursor: pointer;
+}
+
+.side-bar__close-btn{  
+    position: absolute;
+    color: var(--branco);
+    font-size: 1.25rem;
+    right: 0;
+    margin: 25px;
+    cursor: pointer;
+}
+
+.dash__link{
+    display: flex;
+    gap: 15px;
+    flex-direction: row;
+    justify-content: center;
+    padding: 15px;
+}
+
+.dash__link_sala{
+    display: flex;
+    width: 150px;
+    height: 40px;
+    align-items: center;
+    justify-content:  center;
+    border-radius: 14px;
+    border: 2px solid var(--verdinho);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--branco);
+    font-family: var(--fonte-texto);
+}
+
+.dash__link a:hover{
+    background: var(--back-secao);
+    transition: 0.3s ease;
+    color: var(--background);
+}
+
+.dash__conteudo_secao{
+    display: flex;
+    color: var(--background);
+    font-weight: 50rem;
+    font-size: 0.875rem;
+    font-family: var(--fonte-titulo);
+    background-color: var(--back-secao);
+    padding: 1%;
+    width: 105%;
+    border-radius: 0.25rem;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dash__pergunta{
+    width: 20px;
+    height: 20px;
+    margin: -5px 10px;
+}
+
+.dash__explicacao{
+    color: var(--branco);
+}
+
+.dash__resposta{
+    color: var(--verdinho);
+    font-weight: 800px;
+    font-size: 0.875rem;
+    font-family: var(--fonte-texto);
+    background-color: var(--back-resposta);
+    height: auto;
+    width: 300px;
+    border-radius: 10px;
+}
+
+.dash__resposta_codigo{
+	text-align: left;
+    color: var(--branco);
+    font-family: courier, monospace;
+}
+
+.fakeButtons {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    position: relative;
+    top: 6px;
+    left: 6px;
+    background-color: #ff3b47;
+    border-color: #9d252b;
+    display: inline-block;
+  }
+  
+  .fakeMinimize {
+    left: 11px;
+    background-color: #ffc100;
+    border-color: #9d802c;
+  }
+  
+  .fakeZoom {
+    left: 16px;
+    background-color: #00d742;
+    border-color: #049931;
+  }
+  
+  .fakeMenu {
+    width: 100%;
+    box-sizing: border-box;
+    height: 30px;
+    background-color: #bbb;
+    margin: 0 auto;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+
+.fakeScreen {
+    background-color: #151515;
+    box-sizing: border-box;
+    width: 550px;
+    margin: 0 auto;
+    padding: 20px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+
+@media (max-width: 700px) {
+    .fakeMenu {
+        width: 100%;
+        height: 30px;
+      }
+
+    .fakeScreen {
+        width: 100%;
+      }
+}
+
+
+
+#code{
+    background-color: red;
+    font-family: courier, monospace;
+}
