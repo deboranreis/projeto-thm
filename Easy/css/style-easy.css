@@ -108,7 +108,7 @@ body{
 }
 
 .side-bar.active{
-    left: 00;
+    left: 0;
 }
 
 .side-bar__menu{
