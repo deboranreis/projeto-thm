@@ -56,9 +56,7 @@
           </a>
         </div>
         
-      </section>
-
-      
+      </section>      
 
     </main>
 
@@ -90,10 +88,19 @@
               let sideBar = document.querySelector('.side-bar');
               sideBar.classList.remove('active');
               document.querySelector('.side-bar__menu-btn').style.visibility = 'visible';
+              
+              // Reset submenus
+              document.querySelectorAll('.side-bar__sub-menu').forEach(function(subMenu) {
+                subMenu.classList.remove('show');
+              });
+              // Reset dropdown icons
+              document.querySelectorAll('.side-bar__sub-btn .dropdown').forEach(function(icon) {
+                icon.classList.remove('rotate');
+              });
             });
           });
       });
     </script>
-      
+
   </body>
 </html>
