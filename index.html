@@ -6,19 +6,57 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Meu portfólio - Débora Reis</title>
-      <!-- Font Awesome -->
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
       <link rel="stylesheet" href="css/style.css">
       <link rel="stylesheet" href="/Menu/css/style-menu.css">
-      <link rel="stylesheet" href="/Menu/menu.html">
   </head>
 
+  <nav>
+    <div id="menu-container"></div>
+  </nav>
+  
   <body>
+    
+    <main>    
+      <section class="apresentacao__conteudo">
+        <img src="assets/profile.png" class="apresentacao__conteudo_imagem_perfil" alt="Débora Reis, mulher branca com os braços cruzados à frente do peito. Cabelos cacheados presos em um coque, utiliza óculos de grau com armação na cor preta e veste uma bluso de manga curta na cor preta. Ao fundo tem uma parede acinzentada.">
+        <h1 class="apresentacao__conteudo_titulo">Oi Humano 👋</h1>
+        <p class="apresentacao__conteudo_texto">
+          Olá, seja bem-vindo(a) ao meu portfólio! Sou Débora, formada em Redes de Computadores e apaixonada por segurança cibernética. Como Analista de Segurança, tenho o privilégio de explorar continuamente o vasto universo da tecnologia e da segurança da informação. Este portfólio foi cuidadosamente criado para compartilhar minhas experiências, projetos e descobertas.
+        </p>
+        <p class="apresentacao__conteudo_texto">
+          Aqui, você poderá encontrar uma variedade de conteúdos que refletem minha jornada profissional e pessoal. Desde as resoluções de desafios em máquinas do Try Hack Me, até os dashboards que desenvolvi para monitoramento e análise de dados, cada projeto representa um aprendizado valioso e uma oportunidade de crescimento.
+        </p>
+        <p class="apresentacao__conteudo_texto">
+          Sinta-se à vontade para explorar esse lindo projeto. Se você tiver alguma dúvida, sugestão ou desejar colaborar em algum projeto, não hesite em entrar em contato. Estou ansiosa para compartilhar conhecimentos e trocar experiências. Abraços sinalizados!
+        </p>
+        <section class="apresentacao__conteudo_sobremim">
+          <p>
+            Mais sobre mim: 
+            <blockquote class="apresentacao__conteudo_sobremim_block"> 🏠 Sou de Maceió, Alagoas - Brasil. </blockquote>
+            <blockquote class="apresentacao__conteudo_sobremim_block"> 🤟🏼 Estou aprendendo Libras. </blockquote>
+            <blockquote class="apresentacao__conteudo_sobremim_block">😄 Pronomes: Ela / Dela </blockquote>
+          </p>
+        </section>
 
+        <div class=apresentacao__links>
+          <a href="https://www.linkedin.com/in/debora-reis/">
+            <img class="apresentacao__links__link" src="assets/icon-linkedin.svg" alt="Logo da plataforma Linkedin">
+          </a>
+          <a href="https://github.com/deboranreis">
+            <img class="apresentacao__links__link" src="assets/icon-github.png" alt="Logo da plataforma Github">
+          </a>
+          <a href="https://tryhackme.com/p/Prodigy">
+            <img class="apresentacao__links__link_thm" src="assets/icon-thm.png" alt="Logo da Plataforma Try Hack Me">
+          </a>
+        </div>
+        
+      </section>      
+    </main>
 
     <script>
       document.addEventListener('DOMContentLoaded', function() {
-        fetch('/Menu/menu.html')
+        fetch('../Menu/menu.html')
           .then(response => response.text())
           .then(data => {
             document.getElementById('menu-container').innerHTML = data;
@@ -57,45 +95,6 @@
           });
       });
     </script>
-   
-    <main>    
-      <section class="apresentacao__conteudo">
-        <img src="assets/profile.png" class="apresentacao__conteudo_imagem_perfil" alt="Débora Reis, mulher branca com os braços cruzados à frente do peito. Cabelos cacheados presos em um coque, utiliza óculos de grau com armação na cor preta e veste uma bluso de manga curta na cor preta. Ao fundo tem uma parede acinzentada.">
-        <h1 class="apresentacao__conteudo_titulo">Oi Humano 👋</h1>
-        <p class="apresentacao__conteudo_texto">
-          Olá, seja bem-vindo(a) ao meu portfólio! Sou Débora, formada em Redes de Computadores e apaixonada por segurança cibernética. Como Analista de Segurança, tenho o privilégio de explorar continuamente o vasto universo da tecnologia e da segurança da informação. Este portfólio foi cuidadosamente criado para compartilhar minhas experiências, projetos e descobertas.
-        </p>
-        <p class="apresentacao__conteudo_texto">
-          Aqui, você poderá encontrar uma variedade de conteúdos que refletem minha jornada profissional e pessoal. Desde as resoluções de desafios em máquinas do Try Hack Me, até os dashboards que desenvolvi para monitoramento e análise de dados, cada projeto representa um aprendizado valioso e uma oportunidade de crescimento.
-        </p>
-        <p class="apresentacao__conteudo_texto">
-          Sinta-se à vontade para explorar esse lindo projeto. Se você tiver alguma dúvida, sugestão ou desejar colaborar em algum projeto, não hesite em entrar em contato. Estou ansiosa para compartilhar conhecimentos e trocar experiências. Abraços sinalizados!
-        </p>
-        <section class="apresentacao__conteudo_sobremim">
-          <p>
-            Mais sobre mim: 
-            <blockquote class="apresentacao__conteudo_sobremim_block"> 🏠 Sou de Maceió, Alagoas - Brasil. </blockquote>
-            <blockquote class="apresentacao__conteudo_sobremim_block"> 🤟🏼 Estou aprendendo Libras. </blockquote>
-            <blockquote class="apresentacao__conteudo_sobremim_block">😄 Pronomes: Ela / Dela </blockquote>
-          </p>
-        </section>
-
-        <div class=apresentacao__links>
-          <a href="https://www.linkedin.com/in/debora-reis/">
-            <img class="apresentacao__links__link" src="assets/icon-linkedin.svg" alt="Logo da plataforma Linkedin">
-          </a>
-          <a href="https://github.com/deboranreis">
-            <img class="apresentacao__links__link" src="assets/icon-github.png" alt="Logo da plataforma Github">
-          </a>
-          <a href="https://tryhackme.com/p/Prodigy">
-            <img class="apresentacao__links__link_thm" src="assets/icon-thm.png" alt="Logo da Plataforma Try Hack Me">
-          </a>
-        </div>
-        
-      </section>      
-    </main>
-
-
 
   </body>
   
