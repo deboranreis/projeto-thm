@@ -32,7 +32,6 @@ body{
 
 .apresentacao__conteudo{
     display: flex;
-    margin: 40px 40px;
     padding: 50px 50px;
     height: 650px;
     flex-direction: column;
