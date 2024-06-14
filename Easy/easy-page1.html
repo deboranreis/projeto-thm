@@ -89,46 +89,46 @@
     </main> 
       
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        fetch('../Menu/menu.html')
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById('menu-container').innerHTML = data;
-  
-            // Add the click event handlers after loading the menu
-            document.querySelectorAll('.side-bar__sub-btn').forEach(function(btn) {
-              btn.addEventListener('click', function() {
-                let subMenu = btn.nextElementSibling;
-                if (subMenu) {
-                  subMenu.classList.toggle('show');
-                  btn.querySelector('.dropdown').classList.toggle('rotate');
-                }
-              });
-            });
-  
-            document.querySelector('.side-bar__menu-btn').addEventListener('click', function() {
-              let sideBar = document.querySelector('.side-bar');
-              sideBar.classList.toggle('active');
-              document.querySelector('.side-bar__menu-btn').style.visibility = sideBar.classList.contains('active') ? 'hidden' : 'visible';
-            });
-  
-            document.querySelector('.side-bar__close-btn').addEventListener('click', function() {
-              let sideBar = document.querySelector('.side-bar');
-              sideBar.classList.remove('active');
-              document.querySelector('.side-bar__menu-btn').style.visibility = 'visible';
-              
-              // Reset submenus
-              document.querySelectorAll('.side-bar__sub-menu').forEach(function(subMenu) {
-                subMenu.classList.remove('show');
-              });
-              // Reset dropdown icons
-              document.querySelectorAll('.side-bar__sub-btn .dropdown').forEach(function(icon) {
-                icon.classList.remove('rotate');
-              });
+    document.addEventListener('DOMContentLoaded', function() {
+      fetch('./Menu/menu.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('menu-container').innerHTML = data;
+
+          // Add the click event handlers after loading the menu
+          document.querySelectorAll('.side-bar__sub-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+              let subMenu = btn.nextElementSibling;
+              if (subMenu) {
+                subMenu.classList.toggle('show');
+                btn.querySelector('.dropdown').classList.toggle('rotate');
+              }
             });
           });
-      });
-    </script>
+
+          document.querySelector('.side-bar__menu-btn').addEventListener('click', function() {
+            let sideBar = document.querySelector('.side-bar');
+            sideBar.classList.toggle('active');
+            document.querySelector('.side-bar__menu-btn').style.visibility = sideBar.classList.contains('active') ? 'hidden' : 'visible';
+          });
+
+          document.querySelector('.side-bar__close-btn').addEventListener('click', function() {
+            let sideBar = document.querySelector('.side-bar');
+            sideBar.classList.remove('active');
+            document.querySelector('.side-bar__menu-btn').style.visibility = 'visible';
+            
+            // Reset submenus
+            document.querySelectorAll('.side-bar__sub-menu').forEach(function(subMenu) {
+              subMenu.classList.remove('show');
+            });
+            // Reset dropdown icons
+            document.querySelectorAll('.side-bar__sub-btn .dropdown').forEach(function(icon) {
+              icon.classList.remove('rotate');
+            });
+          });
+        });
+    });
+  </script>
 
   </body>
 </html>
