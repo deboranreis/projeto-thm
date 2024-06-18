@@ -90,7 +90,6 @@ body{
     flex-direction: column;
     text-align: center;
     font-size: 0.875rem;
-    color: var(--pergunta);
     font-family: var(--fonte-texto);
     font-weight: 300px;
     gap: 10px;
@@ -229,6 +228,7 @@ body{
     width: 20px;
     height: 20px;
     margin: -5px 10px;
+    color: var(--pergunta);
 }
 
 .sfacil__explicacao{
