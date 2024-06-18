@@ -11,6 +11,7 @@
     --verdinho: #2dd888;
     --back-resposta: #f6f6f62c;
     --back-secao: #2dd88869;
+    --pergunta: #64b49c;
 
     --fonte-titulo: "Krona One", sans-serif;
     --fonte-texto: "Montserrat", sans-serif;
@@ -89,6 +90,7 @@ body{
     flex-direction: column;
     text-align: center;
     font-size: 0.875rem;
+    color: var(--pergunta);
     font-family: var(--fonte-texto);
     font-weight: 300px;
     gap: 10px;
